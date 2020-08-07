@@ -38,7 +38,7 @@ namespace WebApplication2
         }
         protected void Button2_Click(object sender, EventArgs e)
         {
-            Response.Redirect("~/WebForm5.aspx");
+            Response.Redirect("~/Videos.aspx");
         }
         public void AddUser_Click(object sender, EventArgs e)
         {

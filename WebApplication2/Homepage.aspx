@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Homepage.aspx.cs" Inherits="WebApplication2.WebForm1" %>
+﻿-<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Homepage.aspx.cs" Inherits="WebApplication2.WebForm1" %>
 
 <!DOCTYPE html>
 
@@ -70,7 +70,7 @@
   <a href="/Homepage.aspx" class="w3-bar-item w3-button w3-black"><i class="fa fa-home w3-margin-right"></i>Home</a>
   <a href="/Team.aspx" class="w3-bar-item w3-button w3-hide-small ">Team</a>
   <a href="/Videos.aspx" class="w3-bar-item w3-button w3-hide-small w3-hover-#00a3cc">Videos</a>
-  <a href="/WebForm3.aspx" class="w3-bar-item w3-button w3-hide-small w3-hover-#00a3cc">Tickets</a>
+  <a href="/Merch.aspx" class="w3-bar-item w3-button w3-hide-small w3-hover-#00a3cc">Tickets</a>
      <asp:HyperLink ID="HyperLink1" href="/Sign in" runat="server" class="w3-bar-item w3-button w3-hide-small w3-hover-#00a3cc">Sign in</asp:HyperLink>
   
      <asp:Label runat="server" id="profile" class="w3-right w3-dropdown-hover w3-hide-small" Visible="false">
@@ -198,19 +198,7 @@
 <img src="Images\Spark_arena.jfif" class="w3-image" style="width:100%;">
         <h2 class="w3-center">Partners:</h2>
 <a href="https://www.2degreesmobile.co.nz/" target="_blank" alt="2degrees"">
-    <img src="Images\2degrees-logo.png" /> 
-</a>
-<a href="https://www.sky.co.nz/sport" alt="2degrees"">
-    <img src="https://nblcdn.com.au/s/sky-sport-logo-hoz-black.png?bypass" width="425" height="170"/> 
-</a>
-        <a href="https://meadowfresh.co.nz/" alt="2degrees"">
-    <img src="https://nblcdn.com.au/s/mf-green-line.png?bypass" width="275" height="170" /> 
-</a>
-        <a href="https://www.burgerking.co.nz/" alt="2degrees"">
-    <img src="https://nblcdn.com.au/s/screen-shot-2020-03-06-at-3.08.47-pm.png?bypass"width="275" height="170" /> 
-</a>
-        <a href="https://www.paknsave.co.nz/upper-north-island/auckland/albany" alt="2degrees"">
-    <img src="https://nblcdn.com.au/s/pak-n-save.png?bypass" width="425" height="170"/> 
+    <img class="w3-border-teal w3-hover-light-blue w3-quarter" src="Images\2degrees-logo.png" /></a><a href="https://meadowfresh.co.nz/" alt="2degrees"><img class="w3-border-teal w3-hover-light-blue" src="https://nblcdn.com.au/s/mf-green-line.png?bypass" width="275" height="170" /></a><a href="https://www.burgerking.co.nz/" alt="2degrees"> <img class="w3-border-teal w3-hover-light-blue" src="https://nblcdn.com.au/s/screen-shot-2020-03-06-at-3.08.47-pm.png?bypass"width="275" height="170" /> </a> <a href="https://www.paknsave.co.nz/upper-north-island/auckland/albany" alt="2degrees""><img class="w3-border-teal w3-hover-light-blue" src="https://nblcdn.com.au/s/pak-n-save.png?bypass" width="425" height="170"/> 
 </a>
 <!-- Footer -->
 <footer class="w3-container w3-padding-32 w3-theme-d1 w3-center">

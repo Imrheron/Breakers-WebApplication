@@ -35,8 +35,46 @@
   
   <a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-teal" title="Search"><i class="fa fa-search"></i></a>
  </div>
+     </div>
  <h1>You're all good to go!</h1>
         </div>
+            <div>
+                <asp:Button ID="Button1" runat="server" OnClick="Button1_click" Text="Click here to edit your profile" style="background-color:white; color:dodgerblue; border: 2px solid dodgerblue;" class="w3-button w3-center"/>
+            </div>
+        <asp:Label ID="Label1" runat="server" Text="" >
+            <div class="w3-container w3-padding-64 w3-theme-l5" id="edit">
+  <div class="w3-row">
+    <div class="w3-col m5">
+    </div>
+    <div class="w3-col m7">
+        <div class="w3-section">      
+
+&nbsp;</div>
+      <div class="w3-section">      
+        <label><i class="fa fa-user-o w3-text-teal w3-xlarge"></i>  Name</label>
+        <asp:TextBox ID="txtUsername" runat="server" Width="1288px" Height="27px"></asp:TextBox>
+&nbsp;</div>
+      <div class="w3-section">      
+        <label><i class="fa fa-envelope-o w3-text-teal w3-xlarge"></i>  Email</label>
+        <asp:TextBox ID="txtEmail" runat="server" Width="1288px" Height="27px"></asp:TextBox>
+&nbsp;</div>
+      <div class="w3-section">      
+        <label><i class="fa fa-lock w3-text-teal w3-xlarge"></i>  Password</label>
+        <asp:TextBox ID="txtPassword" runat="server" Width="1288px" Height="27px" TextMode="Password"></asp:TextBox>
+&nbsp;</div>  
+         <div class="w3-section">      
+        <label><i class="fas fa-check w3-text-teal w3-xlarge"></i>  Confirm Password</label>
+        <asp:TextBox ID="txtpasswordconfirm" runat="server" Width="1288px" Height="27px" TextMode="Password"></asp:TextBox>
+&nbsp;</div>  
+
+      <asp:Button class="w3-button w3-right w3-theme" ID="Submit" runat="server" Text="Submit" OnClick="Submit_Click"/>
+          
+    </div>
+  </div>
+</div>
+        </asp:Label>
+        
+            
     </form>
 </body>
 </html>

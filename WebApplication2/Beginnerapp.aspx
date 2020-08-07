@@ -74,10 +74,18 @@
 <asp:Image class="w3-quarter" ID="Image1" ImageUrl="~/Images/lunge clipart.jpg" Visible="false" runat="server" Height="370px" Width="425px" />
 
 <asp:Label ID="Label3" class="w3-quarter" runat="server" Visible="false" Text="">
-<p>Then move on to a quad stretch, while standing, pull up</p>
+<p>Then move on to a quad stretch, while standing, make sure to keep your back straight, and hold each leg for at least 10 seconds.</p>
 </asp:Label>
 
-<asp:Image class="w3-quarter" ID="Image2" ImageUrl="~/Images/lunge clipart.jpg" Visible="false" runat="server" Height="370px" Width="425px" />
+<asp:Image class="w3-quarter" ID="Image2" ImageUrl="~/Images/Quad stretch.jpg" Visible="false" runat="server" Height="370px" Width="425px" />
+
+                <asp:Button ID="Button2" runat="server" OnClick="Button2_click" Text="Next" style="background-color:white; color:dodgerblue; border: 2px solid dodgerblue;" class="w3-button w3-right" Visible="false" />
+
+<asp:Label ID="Label4" class="w3-quarter" runat="server" Visible="false" Text="">
+<p>Now start jogging, either on the spot, or around the room. <br />Do this for a minute.</p>
+</asp:Label>
+
+<asp:Image class="w3-quarter" ID="Image3" ImageUrl="~/Images/Jogging silhouette 2.png" Visible="false" runat="server" Height="370px" Width="425px" />
 
         <asp:Label ID="Label10" runat="server" style="margin-bottom: 10px;" Visible="false" class="w3-quarter">
 <div class="w3-card w3-white">

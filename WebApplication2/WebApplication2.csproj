@@ -135,12 +135,15 @@
     <Content Include="Images\Crowd_shot.jpg">
       <BrowseToURL>Crowd_shot</BrowseToURL>
     </Content>
+    <Content Include="Images\Jogging silhouette 2.png" />
     <Content Include="Images\lunge clipart.jpg" />
+    <Content Include="Images\Quad stretch.jpg" />
     <Content Include="Images\Spark_arena.jfif" />
     <Content Include="Images\Spark arena.jfif">
       <BrowseToURL>Images/Spark_arena.jfif</BrowseToURL>
     </Content>
     <Content Include="Intermediateapp.aspx" />
+    <Content Include="ModifyUser.aspx" />
     <Content Include="Proapp.aspx" />
     <Content Include="Sign in.aspx" />
     <Content Include="Signedup.aspx" />
@@ -227,6 +230,13 @@
     </Compile>
     <Compile Include="Intermediateapp.aspx.designer.cs">
       <DependentUpon>Intermediateapp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ModifyUser.aspx.cs">
+      <DependentUpon>ModifyUser.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ModifyUser.aspx.designer.cs">
+      <DependentUpon>ModifyUser.aspx</DependentUpon>
     </Compile>
     <Compile Include="Proapp.aspx.cs">
       <DependentUpon>Proapp.aspx</DependentUpon>

@@ -22,6 +22,13 @@ namespace WebApplication2
             Image1.Visible = true;
             Label3.Visible = true;
             Image2.Visible = true;
+            Button2.Visible = true;
+        }
+
+        protected void Button2_click(object sender, EventArgs e)
+        {
+            Label4.Visible = true;
+            Image3.Visible = true;
         }
     }
 }
