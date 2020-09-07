@@ -7,100 +7,60 @@ using System.Web.UI.WebControls;
 using System.Data.SqlClient;
 using System.Data;
 
-
 namespace WebApplication2
 {
     public partial class ModifyUser : System.Web.UI.Page
     {
-        SqlConnection sqlcon = new SqlConnection(@"Data Source = tpisql01.avcol.school.nz; Initial Catalog = Gerrandatabase; Integrated Security = True;");
+        string connectionstring = @"Data Source = tpisql01.avcol.school.nz; Initial Catalog = Gerrandatabase; Integrated Security = True;";
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (!IsPostBack)
+            using (SqlConnection sqlcon = new SqlConnection(connectionstring))
             {
-                btndelete.Enabled = false;
-                FillGridView();
+                Emaillbl.Text = (string)Session["GetEmail"];
+                Passlbl.Text = (string)Session["GetPassword"];
+                sqlcon.Open();
+                SqlDataAdapter sqlDa = new SqlDataAdapter("GetUserID", sqlcon);
+                sqlDa.SelectCommand.CommandType = CommandType.StoredProcedure;
+                sqlDa.SelectCommand.Parameters.AddWithValue("@Email", Emaillbl.Text);
+                sqlDa.SelectCommand.Parameters.AddWithValue("@Password", Passlbl.Text);
+                DataTable dtbl = new DataTable();
+                sqlDa.Fill(dtbl);
+                UserIDnumber.Text = dtbl.Rows[0][0].ToString();
+                txtusername.Text = dtbl.Rows[0][1].ToString();
+                txtemail.Text = dtbl.Rows[0][2].ToString();
+                txtpassword.Text = dtbl.Rows[0][3].ToString();
+                txtpasswordconfirm.Text = dtbl.Rows[0][3].ToString();
+                
             }
+
         }
 
-        protected void btnclear_Click1(object sender, EventArgs e)
+        protected void Save_Click(object sender, EventArgs e)
         {
-            Clear();
-        }
-
-        public void Clear()
-        {
-            hfUserID.Value = "";
-            txtusername.Text = txtemail.Text = txtpassword.Text = "";
-            lblsuccessmessage.Text = lblerrormessage.Text = "";
-            btnsave.Text = "Save";
-            btndelete.Enabled = false;
-        }
-
-        protected void btnsave_Click(object sender, EventArgs e)
-        {
-            if (sqlcon.State == ConnectionState.Closed)
+            string connectionstring = @"Data Source = tpisql01.avcol.school.nz; Initial Catalog = Gerrandatabase; Integrated Security = True;";
+            using (SqlConnection sqlcon = new SqlConnection(connectionstring))
+            {
                 sqlcon.Open();
-            SqlCommand sqlCmd = new SqlCommand("UserCreateOrUpdate", sqlcon);
-            sqlCmd.CommandType = CommandType.StoredProcedure;
-            sqlCmd.Parameters.AddWithValue("@UserID", (hfUserID.Value == "" ? 0 : Convert.ToInt32(hfUserID.Value)));
-            sqlCmd.Parameters.AddWithValue("@Username", txtusername.Text.Trim());
-            sqlCmd.Parameters.AddWithValue("@Email", txtemail.Text.Trim());
-            sqlCmd.Parameters.AddWithValue("@Password", txtpassword.Text.Trim());
-            sqlCmd.ExecuteNonQuery();
-            sqlcon.Close();
-            string UserID = hfUserID.Value;
-            Clear();
-            if (hfUserID.Value == "")
-                lblsuccessmessage.Text = "Saved Successfully";
-            else
-                lblsuccessmessage.Text = "Updated Successfully";
-            FillGridView();
-        }
+                if (txtusername.Text == "" || txtemail.Text == "" || txtpassword.Text == "" || txtpasswordconfirm.Text == "")
+                {
+                    lblerrormessage.Visible = true;
+                    lblerrormessage.Text = "Not Enough Credentials";
+                }
+                else
+                {
+                    SqlCommand sqlCmd = new SqlCommand("UserCreateOrUpdate", sqlcon);
+                    sqlCmd.CommandType = CommandType.StoredProcedure;
+                    sqlCmd.Parameters.AddWithValue("@UserID", UserIDnumber.Text.Trim());
+                    sqlCmd.Parameters.AddWithValue("@Username", txtusername.Text.Trim());
+                    sqlCmd.Parameters.AddWithValue("@Email", txtemail.Text.Trim());
+                    sqlCmd.Parameters.AddWithValue("@Password", txtpassword.Text.Trim());
+                    sqlCmd.ExecuteNonQuery();
+                    //Response.Redirect("~/Homepage.aspx");
+                    sqlcon.Close();
+                }
+            }
 
-        void FillGridView()
-        {
-            if (sqlcon.State == ConnectionState.Closed)
-                sqlcon.Open();
-            SqlDataAdapter sqlDa = new SqlDataAdapter("UserViewAll", sqlcon);
-            sqlDa.SelectCommand.CommandType = CommandType.StoredProcedure;
-            DataTable dtbl = new DataTable();
-            sqlDa.Fill(dtbl);
-            sqlcon.Close();
-            gvUser.DataSource = dtbl;
-            gvUser.DataBind();
-        }
 
-        protected void lnk_OnClick(object sender, EventArgs e)
-        {
-            int UserID = Convert.ToInt32((sender as LinkButton).CommandArgument);
-            if (sqlcon.State == ConnectionState.Closed)
-                sqlcon.Open();
-            SqlDataAdapter sqlDa = new SqlDataAdapter("ContactViewByID", sqlcon);
-            sqlDa.SelectCommand.CommandType = CommandType.StoredProcedure;
-            sqlDa.SelectCommand.Parameters.AddWithValue("@UserID", UserID);
-            DataTable dtbl = new DataTable();
-            sqlDa.Fill(dtbl);
-            sqlcon.Close();
-            hfUserID.Value = UserID.ToString();
-            txtusername.Text = dtbl.Rows[0]["Username"].ToString();
-            txtemail.Text = dtbl.Rows[0]["Email"].ToString();
-            txtpassword.Text = dtbl.Rows[0]["Password"].ToString();
-            btnsave.Text = "Update";
-            btndelete.Enabled = true;
-        }
-
-        protected void btndelete_Click(object sender, EventArgs e)
-        {
-            if (sqlcon.State == ConnectionState.Closed)
-                sqlcon.Open();
-            SqlCommand sqlCmd = new SqlCommand("UserDeleteByID", sqlcon);
-            sqlCmd.CommandType = CommandType.StoredProcedure;
-            sqlCmd.Parameters.AddWithValue("@UserID", Convert.ToInt32(hfUserID.Value));
-            sqlCmd.ExecuteNonQuery();
-            sqlcon.Close();
-            Clear();
-            FillGridView();
-            lblsuccessmessage.Text = "Deleted Succesfully";
         }
     }
 }

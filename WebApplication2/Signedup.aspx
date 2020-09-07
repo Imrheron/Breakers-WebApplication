@@ -47,20 +47,21 @@
     <div class="w3-col m5">
     </div>
     <div class="w3-col m7">
-        <div class="w3-section">      
-
+        <div class="w3-section">       
+        <label><i class="fas fa-check w3-text-teal w3-xlarge"></i>  Confirm Password</label>
+            <asp:HiddenField ID="hfUserID" runat="server" />
 &nbsp;</div>
       <div class="w3-section">      
         <label><i class="fa fa-user-o w3-text-teal w3-xlarge"></i>  Name</label>
-        <asp:TextBox ID="txtUsername" runat="server" Width="1288px" Height="27px"></asp:TextBox>
+        <asp:TextBox ID="txtusername" runat="server" Width="1288px" Height="27px"></asp:TextBox>
 &nbsp;</div>
       <div class="w3-section">      
         <label><i class="fa fa-envelope-o w3-text-teal w3-xlarge"></i>  Email</label>
-        <asp:TextBox ID="txtEmail" runat="server" Width="1288px" Height="27px"></asp:TextBox>
+        <asp:TextBox ID="txtemail" runat="server" Width="1288px" Height="27px"></asp:TextBox>
 &nbsp;</div>
       <div class="w3-section">      
         <label><i class="fa fa-lock w3-text-teal w3-xlarge"></i>  Password</label>
-        <asp:TextBox ID="txtPassword" runat="server" Width="1288px" Height="27px" TextMode="Password"></asp:TextBox>
+        <asp:TextBox ID="txtpassword" runat="server" Width="1288px" Height="27px" TextMode="Password"></asp:TextBox>
 &nbsp;</div>  
          <div class="w3-section">      
         <label><i class="fas fa-check w3-text-teal w3-xlarge"></i>  Confirm Password</label>

@@ -32,7 +32,6 @@
         <!-- Brooooooooooooooooooooo, edit your profile code needs to be done -->
     </div>
         </asp:Label>
-  
   <a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-teal" title="Search"><i class="fa fa-search"></i></a>
  </div>
  <div class="w3-quarter">

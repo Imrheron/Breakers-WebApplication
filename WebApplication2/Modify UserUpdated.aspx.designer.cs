@@ -11,7 +11,7 @@ namespace WebApplication2
 {
 
 
-    public partial class Sign_in
+    public partial class WebForm2
     {
 
         /// <summary>
@@ -33,40 +33,58 @@ namespace WebApplication2
         protected global::System.Web.UI.WebControls.HyperLink HyperLink1;
 
         /// <summary>
-        /// profile control.
+        /// buttonprofile control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label profile;
+        protected global::System.Web.UI.WebControls.Button buttonprofile;
 
         /// <summary>
-        /// txtUsername control.
+        /// Button1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtUsername;
+        protected global::System.Web.UI.WebControls.Button Button1;
 
         /// <summary>
-        /// txtEmail control.
+        /// Practice control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtEmail;
+        protected global::System.Web.UI.WebControls.Button Practice;
 
         /// <summary>
-        /// txtPassword control.
+        /// txtusername control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtPassword;
+        protected global::System.Web.UI.WebControls.TextBox txtusername;
+
+        /// <summary>
+        /// txtemail control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtemail;
+
+        /// <summary>
+        /// txtpassword control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtpassword;
 
         /// <summary>
         /// txtpasswordconfirm control.
@@ -78,48 +96,57 @@ namespace WebApplication2
         protected global::System.Web.UI.WebControls.TextBox txtpasswordconfirm;
 
         /// <summary>
-        /// Button2 control.
+        /// UserIDnumber control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button2;
+        protected global::System.Web.UI.WebControls.Label UserIDnumber;
 
         /// <summary>
-        /// HField1 control.
+        /// Emaillbl control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HiddenField HField1;
+        protected global::System.Web.UI.WebControls.Label Emaillbl;
 
         /// <summary>
-        /// txtEmailsignin control.
+        /// Passlbl control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtEmailsignin;
+        protected global::System.Web.UI.WebControls.Label Passlbl;
 
         /// <summary>
-        /// txtPasswordsignin control.
+        /// Save control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtPasswordsignin;
+        protected global::System.Web.UI.WebControls.Button Save;
 
         /// <summary>
-        /// Button1 control.
+        /// lblerrormessage control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button1;
+        protected global::System.Web.UI.WebControls.Label lblerrormessage;
+
+        /// <summary>
+        /// lblsuccessmessage control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblsuccessmessage;
     }
 }

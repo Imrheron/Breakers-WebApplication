@@ -130,6 +130,7 @@
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
     <Content Include="Images\2degrees-logo.png" />
+    <Content Include="Images\2degrees_Logotransparent.png" />
     <Content Include="Images\Ater Majok.png" />
     <Content Include="Images\Breakers Logo White.png" />
     <Content Include="Images\Crowd_shot.jpg">
@@ -153,6 +154,7 @@
     <Content Include="Team.aspx" />
     <Content Include="Videos.aspx" />
     <Content Include="Merch.aspx" />
+    <Content Include="Modify UserUpdated.aspx" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -322,6 +324,13 @@
     </Compile>
     <Compile Include="Merch.aspx.designer.cs">
       <DependentUpon>Merch.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Modify UserUpdated.aspx.cs">
+      <DependentUpon>Modify UserUpdated.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modify UserUpdated.aspx.designer.cs">
+      <DependentUpon>Modify UserUpdated.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup />

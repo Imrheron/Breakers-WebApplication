@@ -42,22 +42,13 @@ namespace WebApplication2
         protected global::System.Web.UI.WebControls.Label profile;
 
         /// <summary>
-        /// hfUserID control.
+        /// Label1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HiddenField hfUserID;
-
-        /// <summary>
-        /// Label control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label;
+        protected global::System.Web.UI.WebControls.Label Label1;
 
         /// <summary>
         /// txtusername control.
@@ -69,15 +60,6 @@ namespace WebApplication2
         protected global::System.Web.UI.WebControls.TextBox txtusername;
 
         /// <summary>
-        /// Label2 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label2;
-
-        /// <summary>
         /// txtemail control.
         /// </summary>
         /// <remarks>
@@ -85,15 +67,6 @@ namespace WebApplication2
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtemail;
-
-        /// <summary>
-        /// Label3 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label3;
 
         /// <summary>
         /// txtpassword control.
@@ -105,40 +78,49 @@ namespace WebApplication2
         protected global::System.Web.UI.WebControls.TextBox txtpassword;
 
         /// <summary>
-        /// btnsave control.
+        /// txtpasswordconfirm control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnsave;
+        protected global::System.Web.UI.WebControls.TextBox txtpasswordconfirm;
 
         /// <summary>
-        /// btndelete control.
+        /// UserIDnumber control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btndelete;
+        protected global::System.Web.UI.WebControls.Label UserIDnumber;
 
         /// <summary>
-        /// btnclear control.
+        /// Emaillbl control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnclear;
+        protected global::System.Web.UI.WebControls.Label Emaillbl;
 
         /// <summary>
-        /// lblsuccessmessage control.
+        /// Passlbl control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblsuccessmessage;
+        protected global::System.Web.UI.WebControls.Label Passlbl;
+
+        /// <summary>
+        /// Save control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button Save;
 
         /// <summary>
         /// lblerrormessage control.
@@ -150,12 +132,12 @@ namespace WebApplication2
         protected global::System.Web.UI.WebControls.Label lblerrormessage;
 
         /// <summary>
-        /// gvUser control.
+        /// lblsuccessmessage control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView gvUser;
+        protected global::System.Web.UI.WebControls.Label lblsuccessmessage;
     }
 }

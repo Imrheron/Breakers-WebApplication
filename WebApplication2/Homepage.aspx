@@ -73,16 +73,13 @@
   <a href="/Merch.aspx" class="w3-bar-item w3-button w3-hide-small w3-hover-#00a3cc">Tickets</a>
      <asp:HyperLink ID="HyperLink1" href="/Sign in" runat="server" class="w3-bar-item w3-button w3-hide-small w3-hover-#00a3cc">Sign in</asp:HyperLink>
   
-     <asp:Label runat="server" id="profile" class="w3-right w3-dropdown-hover w3-hide-small" Visible="false">
-    <button class="w3-button" title="Notifications">Profile <i class=" fa fa-caret-down"></i></button>     
-    <div class="w3-dropdown-content w3-card-4 w3-bar-block">
-        <asp:Button ID="Button1" class="w3-bar-item w3-button" runat="server" Text="Sign out" OnClick="Signout_click" />
-      <a href="/Signout.aspx" class="w3-bar-item w3-button">Actual</a>
-      <a href="#" class="w3-bar-item w3-button">Link</a>
-      <a href="#" class="w3-bar-item w3-button">Link</a>
+    <asp:Button runat="server" class="w3-bar-item w3-right w3-dropdown-hover w3-button" title="Notifications" Text="profile" OnClick="buttonprofile_Click" ID="buttonprofile" Visible="False" />     
+    
+        <asp:Button ID="Button1" class="w3-bar-item w3-right w3-dropdown-hover w3-button" runat="server" Text="Sign out" OnClick="Signout_click" />
+      <asp:Button ID="Practice" class="w3-bar-item w3-right w3-button" runat="server" Text="Use the App!" OnClick="Practice_Click" Visible="False" />
         <!--  -->
     </div>
-        </asp:Label>
+        
   
   <a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-teal" title="Search"><i class="fa fa-search"></i></a>
  </div>
@@ -189,7 +186,7 @@
 </div>
 <!-- Open App -->
 <div class="w3-row-padding w3-center w3-padding-64" id="app">
-    <div class="w3-padding-16"><span class="w3-xlarge w3-border-teal w3-bottombar">Download our app!</span></div>
+    <div class="w3-padding-16"><span class="w3-xlarge w3-border-teal w3-bottombar">Learn to play basketball from our app!</span></div>
       <h3>Get all the best training and fitness tips with our app</h3>
       <p>Our app gives you the opportunity to train and keep fit just like one of the breakers! just follow the guide to perfect your chosen skill!</p>
         <asp:Button ID="Openapp" class="w3-button w3-theme" runat="server" Text="Get the app!" OnClick="Openapp_click" />
@@ -197,8 +194,8 @@
 <!-- Image of location/map -->
 <img src="Images\Spark_arena.jfif" class="w3-image" style="width:100%;">
         <h2 class="w3-center">Partners:</h2>
-<a href="https://www.2degreesmobile.co.nz/" target="_blank" alt="2degrees"">
-    <img class="w3-border-teal w3-hover-light-blue w3-quarter" src="Images\2degrees-logo.png" /></a><a href="https://meadowfresh.co.nz/" alt="2degrees"><img class="w3-border-teal w3-hover-light-blue" src="https://nblcdn.com.au/s/mf-green-line.png?bypass" width="275" height="170" /></a><a href="https://www.burgerking.co.nz/" alt="2degrees"> <img class="w3-border-teal w3-hover-light-blue" src="https://nblcdn.com.au/s/screen-shot-2020-03-06-at-3.08.47-pm.png?bypass"width="275" height="170" /> </a> <a href="https://www.paknsave.co.nz/upper-north-island/auckland/albany" alt="2degrees""><img class="w3-border-teal w3-hover-light-blue" src="https://nblcdn.com.au/s/pak-n-save.png?bypass" width="425" height="170"/> 
+<a href="https://www.2degreesmobile.co.nz/" target="_blank" style="width:50px;" alt="2degrees"">
+    <img class="w3-border-teal w3-hover-light-blue w3-quarter" height="100" src="Images\2degrees_Logotransparent.png" /></a><a href="https://meadowfresh.co.nz/" alt="2degrees"><img class="w3-border-teal w3-hover-light-blue" src="https://nblcdn.com.au/s/mf-green-line.png?bypass" width="275" height="170" /></a><a href="https://www.burgerking.co.nz/" alt="2degrees"> <img class="w3-border-teal w3-hover-light-blue" src="https://nblcdn.com.au/s/screen-shot-2020-03-06-at-3.08.47-pm.png?bypass"width="275" height="170" /> </a> <a href="https://www.paknsave.co.nz/upper-north-island/auckland/albany" alt="2degrees""><img class="w3-border-teal w3-hover-light-blue" src="https://nblcdn.com.au/s/pak-n-save.png?bypass" width="425" height="170"/> 
 </a>
 <!-- Footer -->
 <footer class="w3-container w3-padding-32 w3-theme-d1 w3-center">

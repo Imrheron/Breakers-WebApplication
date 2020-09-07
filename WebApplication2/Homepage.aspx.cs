@@ -17,16 +17,27 @@ namespace WebApplication2
 
         protected void Page_Load(object sender, EventArgs e)
         {
-                if ((string)Session["abc"] == "samspen")
-                {
-                profile.Visible = true;
+            if ((string)Session["abc"] == "samspen")
+            { 
+                buttonprofile.Visible = true;
                 HyperLink1.Visible = false;
-                }
+                Button1.Visible = true;
+                Practice.Visible = true;
+            }
+            else
+            {
+                buttonprofile.Visible = false;
+                HyperLink1.Visible = true;
+                Button1.Visible = false;
+                Practice.Visible = false;
+            }
+                   
         }
 
         protected void Button1_Click(object sender, EventArgs e)
         {
                 Response.Redirect("~/App.aspx");
+           
         }
         protected void Openapp_click(object sender, EventArgs e)
         {
@@ -34,7 +45,12 @@ namespace WebApplication2
         }
         protected void Signout_click(object sender, EventArgs e)
         {
-            Response.Redirect("~/App.aspx");
+            Session["abc"] = "signout";
+            buttonprofile.Visible = false;
+            HyperLink1.Visible = true;
+            Button1.Visible = false;
+            Practice.Visible = false;
+
         }
         protected void Button2_Click(object sender, EventArgs e)
         {
@@ -54,7 +70,7 @@ namespace WebApplication2
                     sqlCmd.Parameters.AddWithValue("@Email", txtEmail.Text.Trim());
                     sqlCmd.Parameters.AddWithValue("@Password", txtPassword.Text.Trim());
                     sqlCmd.ExecuteNonQuery();
-                    Session["abc"] = "samspen";
+                    Session["abc"] = "@UserID";
                     Response.Redirect("~/Signedup.aspx");
                     Clear();
                     
@@ -65,8 +81,16 @@ namespace WebApplication2
         {
             txtUsername.Text = txtEmail.Text = txtPassword.Text = "";
         }
-        
-        
+
+        protected void Practice_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/App.aspx");
+        }
+
+        protected void buttonprofile_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/ModifyUser.aspx");
+        }
     }
     
 }

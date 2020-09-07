@@ -18,6 +18,7 @@ namespace WebApplication2
             {
                 profile.Visible = true;
                 HyperLink1.Visible = false;
+
             }
         }
 
@@ -34,9 +35,9 @@ namespace WebApplication2
             SqlCommand sqlCmd = new SqlCommand("UserCreateOrUpdate", sqlcon);
             sqlCmd.CommandType = CommandType.StoredProcedure;
             //sqlCmd.Parameters.AddWithValue("@UserID", (hfUserID.Value == "" ? 0 : Convert.ToInt32(hfUserID.Value)));
-            sqlCmd.Parameters.AddWithValue("@Username", txtUsername.Text.Trim());
-            sqlCmd.Parameters.AddWithValue("@Email", txtEmail.Text.Trim());
-            sqlCmd.Parameters.AddWithValue("@Password", txtPassword.Text.Trim());
+            sqlCmd.Parameters.AddWithValue("@Username", txtusername.Text.Trim());
+            sqlCmd.Parameters.AddWithValue("@Email", txtemail.Text.Trim());
+            sqlCmd.Parameters.AddWithValue("@Password", txtpassword.Text.Trim());
             sqlCmd.ExecuteNonQuery();
             sqlcon.Close();
             //string UserID = hfUserID.Value;

@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Data.SqlClient;
+using System.Data;
 
 namespace WebApplication2
 {
@@ -39,6 +40,7 @@ namespace WebApplication2
                         sqlCmd.Parameters.AddWithValue("@Password", txtPassword.Text.Trim());
                         sqlCmd.ExecuteNonQuery();
                         Session["abc"] = "samspen";
+
                         Response.Redirect("~/Signedup.aspx");
                         Clear();
                     }
@@ -52,13 +54,21 @@ namespace WebApplication2
         }
         protected void Button1_Click(object sender, EventArgs e) //Sign in code
         {
+            SqlConnection sqlcon = new SqlConnection(@"Data Source = tpisql01.avcol.school.nz; Initial Catalog = Gerrandatabase; Integrated Security = True;");
             SqlConnection con = new SqlConnection(connectionstring);
             SqlDataAdapter sqa = new SqlDataAdapter("Select UserID From tblUser where Email = '" + txtEmailsignin.Text + "' and Password = '" + txtPasswordsignin.Text + "'", con);
             System.Data.DataTable dtbl = new System.Data.DataTable();
             sqa.Fill(dtbl);
             if (dtbl.Rows.Count > 0)
             {
+                if (sqlcon.State == ConnectionState.Closed)
+                    sqlcon.Open();
+                SqlCommand sqlCmd = new SqlCommand("UserCreateOrUpdate", sqlcon);
+                sqlCmd.CommandType = CommandType.StoredProcedure;
+                sqlCmd.Parameters.AddWithValue("@UserID", (HField1.Value == "" ? 0 : Convert.ToInt32(HField1.Value)));
                 Session["abc"] = "samspen";
+                Session["GetEmail"] = txtEmailsignin.Text;
+                Session["GetPassword"] = txtPasswordsignin.Text;
                 Response.Redirect("~/Signedup.aspx");
             }
             else

@@ -40,10 +40,8 @@
         <!-- Brooooooooooooooooooooo, edit your profile code needs to be done -->
     </div>
         </asp:Label>
-  
   <a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-teal" title="Search"><i class="fa fa-search"></i></a>
  </div>
-        <div>
             <div class="w3-container w3-padding-64 w3-theme-l5" id="contact">
   <div class="w3-row">
     <div class="w3-col m5">
@@ -73,6 +71,7 @@
     </div>
   </div>
 </div>
+       <asp:HiddenField ID="HField1" runat="server" visible="true"/>
            <div class="w3-container w3-padding-64 w3-theme-l5" id="Sign in">
   <div class="w3-row">
     <div class="w3-col m5">

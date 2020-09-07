@@ -1,7 +1,11 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="App.aspx.cs" Inherits="WebApplication2.WebForm3" %>
 
 <!DOCTYPE html>
-
+    <style>
+        h6{
+            size: xx-small;
+        }
+    </style>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title>NZ Breakers tickets</title>
@@ -9,6 +13,8 @@
 <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css"/>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
 </head>
+
+
 <body>
     <nav class="w3-sidebar w3-bar-block w3-white w3-card w3-animate-left w3-xxlarge" style="display:none;z-index:2" id="mySidebar">
   <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-display-topright w3-text-teal">Close
@@ -89,10 +95,10 @@
         <li class="w3-theme">
           <p class="w3-xlarge">Pro</p>
         </li>
-        <li class="w3-padding-16"><b>50GB</b> Storage</li>
-        <li class="w3-padding-16"><b>50</b> Emails</li>
-        <li class="w3-padding-16"><b>50</b> Domains</li>
-        <li class="w3-padding-16"><b>Endless</b> Support ;)</li>
+        <li class="w3-padding-16"><b>Through the Legs Dribble</b> Storage</li>
+        <li class="w3-padding-16"><b>Behind the Back Dribble</b> Emails</li>
+        <li class="w3-padding-16"><b>Crossover Dribble</b> Domains</li>
+        <li class="w3-padding-16"><b>Endless</b> Support</li>
         <li class="w3-padding-16">
           <h2 class="w3-wide"><i class="fa fa-usd"></i> 50</h2>
           <span class="w3-opacity">per month</span>
