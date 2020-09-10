@@ -92,7 +92,6 @@
     <a href="#contact" class="w3-bar-item w3-button">Contact</a>
     <a href="#" class="w3-bar-item w3-button">Search</a>
   </div>
-</div>
 
 <!-- Image Header -->
 <div id="example1" class="w3-display-container w3-animate-opacity">
