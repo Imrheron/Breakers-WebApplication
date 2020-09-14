@@ -190,12 +190,7 @@
       <p>Our app gives you the opportunity to train and keep fit just like one of the breakers! just follow the guide to perfect your chosen skill!</p>
         <asp:Button ID="Openapp" class="w3-button w3-theme" runat="server" Text="Get the app!" OnClick="Openapp_click" />
     </div>
-<!-- Image of location/map -->
-<img src="Images\Spark_arena.jfif" class="w3-image" style="width:100%;">
-        <h2 class="w3-center">Partners:</h2>
-<a href="https://www.2degreesmobile.co.nz/" target="_blank" style="width:50px;" alt="2degrees"">
-    <img class="w3-border-teal w3-hover-light-blue w3-quarter" height="100" src="Images\2degrees_Logotransparent.png" /></a><a href="https://meadowfresh.co.nz/" alt="2degrees"><img class="w3-border-teal w3-hover-light-blue" src="https://nblcdn.com.au/s/mf-green-line.png?bypass" width="275" height="170" /></a><a href="https://www.burgerking.co.nz/" alt="2degrees"> <img class="w3-border-teal w3-hover-light-blue" src="https://nblcdn.com.au/s/screen-shot-2020-03-06-at-3.08.47-pm.png?bypass"width="275" height="170" /> </a> <a href="https://www.paknsave.co.nz/upper-north-island/auckland/albany" alt="2degrees""><img class="w3-border-teal w3-hover-light-blue" src="https://nblcdn.com.au/s/pak-n-save.png?bypass" width="425" height="170"/> 
-</a>
+
 <!-- Footer -->
 <footer class="w3-container w3-padding-32 w3-theme-d1 w3-center">
     <img class="w3-left" src="https://www.repco.co.nz/medias/logo-repco.png?context=bWFzdGVyfGltYWdlc3wxMzA1MXxpbWFnZS9wbmd8c3lzLW1hc3Rlci9pbWFnZXMvaDU3L2gyYi84Nzk2MTcyNzE0MDE0L2xvZ28tcmVwY28ucG5nfDM4MTNjOTExMTc4Mzk3NTVmMDU3NGVjZWY3OTEyZTIwMzY1MDc5M2E4YTVjZjMwOGVmN2NmZDEyMzY4MGU1OTE" width="10" height="8"  />

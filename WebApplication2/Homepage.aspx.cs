@@ -17,7 +17,7 @@ namespace WebApplication2
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            if ((string)Session["abc"] == "samspen")
+                if ((string)Session["abc"] == "samspen")
             { 
                 buttonprofile.Visible = true;
                 HyperLink1.Visible = false;

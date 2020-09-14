@@ -43,17 +43,20 @@
     </div>
       <div class="w3-section">  
           
-        <label><i class="fa fa-user-o w3-text-teal w3-xlarge"></i>  Name</label> <asp:TextBox ID="txtusername" runat="server" Width="1288px" Height="27px"></asp:TextBox>&nbsp;</div><div class="w3-section">      
-        <label><i class="fa fa-envelope-o w3-text-teal w3-xlarge"></i>  Email</label> <asp:TextBox ID="txtemail" runat="server" Width="1288px" Height="27px"></asp:TextBox>&nbsp;</div><div class="w3-section">      
-        <label><i class="fa fa-lock w3-text-teal w3-xlarge"></i>  Password</label> <asp:TextBox ID="txtpassword" runat="server" Width="1288px" Height="27px"></asp:TextBox>&nbsp;</div><div class="w3-section">      
+        <label><i class="fa fa-user-o w3-text-teal w3-xlarge"></i>  Name</label> <asp:TextBox ID="txtusername" runat="server" Width="1288px" Height="27px" OnTextChanged="txtusername_TextChanged" AutoPostBack="true"></asp:TextBox>&nbsp;</div><div class="w3-section">      
+        <label><i class="fa fa-envelope-o w3-text-teal w3-xlarge"></i>  Email</label> <asp:TextBox ID="txtemail" runat="server" Width="1288px" Height="27px" OnTextChanged="txtemail_TextChanged" AutoPostBack="true"></asp:TextBox>&nbsp;</div><div class="w3-section">      
+        <label><i class="fa fa-lock w3-text-teal w3-xlarge"></i>  Password</label> <asp:TextBox ID="txtpassword" runat="server" Width="1288px" Height="27px" OnTextChanged="txtpassword_TextChanged" AutoPostBack="true"></asp:TextBox>&nbsp;</div><div class="w3-section">      
         <label><i class="fas fa-check w3-text-teal w3-xlarge"></i>  Confirm Password</label> <asp:TextBox ID="txtpasswordconfirm" runat="server" Width="1288px" Height="27px"></asp:TextBox>&nbsp;</div></div></div></asp:Label>
         
        
-        <asp:Label ID="UserIDnumber" runat="server" Text=""></asp:Label>
+        <asp:Label ID="UserIDnumber" runat="server" Text="" Visible="false"></asp:Label>
         <asp:Label ID="Emaillbl" runat="server" Text="" Visible="false"></asp:Label>
         <asp:Label ID="Passlbl" runat="server" Text="" Visible="false"></asp:Label>
         <asp:Button ID="Save" runat="server" OnClick="Save_Click" Text="Save" style="background-color:white; color:dodgerblue; border: 2px solid dodgerblue;" class="w3-button"/> 
-        <asp:Label ID="lblerrormessage" runat="server" Text="" Visible="false"></asp:Label>
+            <asp:Label ID="lbluserbox" runat="server" Text="" Visible="false"></asp:Label>
+            <asp:Label ID="lblemailbox" runat="server" Text="" Visible="false"></asp:Label>
+            <asp:Label ID="lblpassbox" runat="server" Text="" Visible="false"></asp:Label>
+            <asp:Label ID="lblerrormessage" runat="server" Text="" Visible="false"></asp:Label>
         <asp:Label ID="lblsuccessmessage" runat="server" Text="" Visible="false"></asp:Label>
     </form>
 </body>

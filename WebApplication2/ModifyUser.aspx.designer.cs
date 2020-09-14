@@ -123,6 +123,33 @@ namespace WebApplication2
         protected global::System.Web.UI.WebControls.Button Save;
 
         /// <summary>
+        /// lbluserbox control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lbluserbox;
+
+        /// <summary>
+        /// lblemailbox control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblemailbox;
+
+        /// <summary>
+        /// lblpassbox control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblpassbox;
+
+        /// <summary>
         /// lblerrormessage control.
         /// </summary>
         /// <remarks>
