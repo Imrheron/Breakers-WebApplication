@@ -49,7 +49,7 @@
         <label><i class="fas fa-check w3-text-teal w3-xlarge"></i>  Confirm Password</label> <asp:TextBox ID="txtpasswordconfirm" runat="server" Width="1288px" Height="27px"></asp:TextBox>&nbsp;</div></div></div></asp:Label>
         
        
-        <asp:Label ID="UserIDnumber" runat="server" Text="" Visible="false"></asp:Label>
+        <asp:Label ID="UserIDnumber" runat="server" Text="" Visible="true"></asp:Label>
         <asp:Label ID="Emaillbl" runat="server" Text="" Visible="false"></asp:Label>
         <asp:Label ID="Passlbl" runat="server" Text="" Visible="false"></asp:Label>
         <asp:Button ID="Save" runat="server" OnClick="Save_Click" Text="Save" style="background-color:white; color:dodgerblue; border: 2px solid dodgerblue;" class="w3-button"/> 

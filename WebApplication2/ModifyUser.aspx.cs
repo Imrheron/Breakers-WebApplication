@@ -35,6 +35,7 @@ namespace WebApplication2
 
                 }
             }
+            
             lbluserbox.Text = txtusername.Text;
             lblpassbox.Text = txtpassword.Text;
             lblemailbox.Text = txtemail.Text;
@@ -70,6 +71,8 @@ namespace WebApplication2
                     sqlCmd.Parameters.AddWithValue("@Email", lblemailbox.Text.Trim());
                     sqlCmd.Parameters.AddWithValue("@Password", lblpassbox.Text.Trim());
                     sqlCmd.ExecuteNonQuery();
+                    Session["GetEmail"] = txtemail.Text;
+                    Session["GetPassword"] = txtpassword.Text;
                     Response.Redirect("~/Homepage.aspx");
                 }
             }
