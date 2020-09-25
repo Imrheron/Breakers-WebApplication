@@ -65,7 +65,7 @@
 
 <!-- Navbar -->
 <div class="w3-top">
- <div class="w3-bar w3-theme-d2 w3-left-align">
+ <div class="w3-bar w3-theme-d2 w3-left-align" style="border-bottom:solid, 5px; border-bottom-color:dodgerblue;">
   <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-theme-d2" href="javascript:void(0);" onclick="openNav()"><i class="fa fa-bars"></i></a>
   <a href="/Homepage.aspx" class="w3-bar-item w3-button w3-black"><i class="fa fa-home w3-margin-right"></i>Home</a>
   <a href="/Team.aspx" class="w3-bar-item w3-button w3-hide-small ">Team</a>
@@ -79,9 +79,6 @@
       <asp:Button ID="Practice" class="w3-bar-item w3-right w3-button" runat="server" Text="Use the App!" OnClick="Practice_Click" Visible="False" />
         <!--  -->
     </div>
-         
-  
-  <a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-teal" title="Search"><i class="fa fa-search"></i></a>
  </div>
 
   <!-- Navbar on small screens -->
@@ -171,14 +168,14 @@
         <asp:TextBox ID="txtUsername" runat="server" Width="1100px" Height="27px"></asp:TextBox>
 &nbsp;</div>
       <div class="w3-section">      
-        <label><i class="fa fa-envelope-o w3-text-teal w3-xlarge"></i>  Email</label>
+        <label><i class="fa-envelope-o  fa w3-text-teal w3-xlarge"></i>  Email</label>
         <asp:TextBox ID="txtEmail" runat="server" Width="1100px" Height="27px"></asp:TextBox>
 &nbsp;</div>
       <div class="w3-section">      
         <label><i class="fa fa-lock w3-text-teal w3-xlarge"></i>  Password</label>
         <asp:TextBox ID="txtPassword" runat="server" Width="1100px" Height="27px"></asp:TextBox>
 &nbsp;</div>  
-        <asp:Button ID="AddUser" class="w3-right w3-theme" runat="server" Text="Sign Up!" OnClick="AddUser_Click" />
+        <asp:Button ID="AddUser" class="w3-right w3-button w3-theme" runat="server" Text="Sign Up!" OnClick="AddUser_Click" />
     </div>
       
   </div>

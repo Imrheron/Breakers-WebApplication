@@ -7,6 +7,16 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title></title>
+     <script>
+        $(function () {
+            $(document).keypress(function (e) {
+                if (e.keyCode == 13) {
+                    //for when users press enter
+                    $("Button1").click();
+                }
+            });
+        })
+    </script>
 </head>
 <body>
     <form id="form1" runat="server">
@@ -28,19 +38,15 @@
   <a href="/Homepage.aspx" class="w3-bar-item w3-button w3-black"><i class="fa fa-home w3-margin-right"></i>Home</a>
   <a href="/Team.aspx" class="w3-bar-item w3-button w3-hide-small ">Team</a>
   <a href="/Videos.aspx" class="w3-bar-item w3-button w3-hide-small w3-hover-#00a3cc">Videos</a>
-  <a href="/WebForm3.aspx" class="w3-bar-item w3-button w3-hide-small w3-hover-#00a3cc">Tickets</a>
+  <a href="/Merch.aspx" class="w3-bar-item w3-button w3-hide-small w3-hover-#00a3cc">Tickets</a>
      <asp:HyperLink ID="HyperLink1" href="/Sign in" runat="server" class="w3-bar-item w3-button w3-hide-small w3-hover-#00a3cc">Sign in</asp:HyperLink>
   
-     <asp:Label runat="server" id="profile" class="w3-right w3-dropdown-hover w3-hide-small" Visible="false">
-    <button class="w3-button" title="Notifications">Profile <i class=" fa fa-caret-down"></i></button>     
-    <div class="w3-dropdown-content w3-card-4 w3-bar-block">
-      <a href="#" class="w3-bar-item w3-button">Link</a>
-      <a href="#" class="w3-bar-item w3-button">Link</a>
-      <a href="#" class="w3-bar-item w3-button">Link</a>
-        <!-- Brooooooooooooooooooooo, edit your profile code needs to be done -->
+    <asp:Button runat="server" class="w3-bar-item w3-right w3-dropdown-hover w3-button" title="Notifications" Text="profile" OnClick="buttonprofile_Click" ID="buttonprofile" Visible="False" />     
+    
+        <asp:Button ID="Button3" class="w3-bar-item w3-right w3-dropdown-hover w3-button" runat="server" Text="Sign out" OnClick="Signout_click" />
+      <asp:Button ID="Practice" class="w3-bar-item w3-right w3-button" runat="server" Text="Use the App!" OnClick="Practice_Click" Visible="False" />
+        <!--  -->
     </div>
-        </asp:Label>
-  <a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-teal" title="Search"><i class="fa fa-search"></i></a>
  </div>
             <div class="w3-container w3-padding-64 w3-theme-l5" id="contact">
   <div class="w3-row">
@@ -51,23 +57,23 @@
     </div>
     <div class="w3-col m7">
       <div class="w3-section">      
-        <label><i class="fa fa-user-o w3-text-teal w3-xlarge"></i>  Name</label>
-        <asp:TextBox ID="txtUsername" runat="server" Width="1288px" Height="27px"></asp:TextBox>
+        <label><i class="fa fa-user-o w3-text-teal w3-xlarge"></i>  Name</label><br />
+        <asp:TextBox ID="txtUsername" runat="server" Width="1000px" Height="27px"></asp:TextBox>
 &nbsp;</div>
       <div class="w3-section">      
-        <label><i class="fa fa-envelope-o w3-text-teal w3-xlarge"></i>  Email</label>
-        <asp:TextBox ID="txtEmail" runat="server" Width="1288px" Height="27px"></asp:TextBox>
+        <label><i class="fa fa-envelope-o w3-text-teal w3-xlarge"></i>  Email</label><br />
+        <asp:TextBox ID="txtEmail" runat="server" Width="1000px" Height="27px"></asp:TextBox>
 &nbsp;</div>
       <div class="w3-section">      
-        <label><i class="fa fa-lock w3-text-teal w3-xlarge"></i>  Password</label>
-        <asp:TextBox ID="txtPassword" runat="server" Width="1288px" Height="27px" TextMode="Password"></asp:TextBox>
+        <label><i class="fa fa-lock w3-text-teal w3-xlarge"></i>  Password</label><br />
+        <asp:TextBox ID="txtPassword" runat="server" Width="1000px" Height="27px" TextMode="Password"></asp:TextBox>
 &nbsp;</div>  
          <div class="w3-section">      
         <label><i class="fas fa-check w3-text-teal w3-xlarge"></i>  Confirm Password</label>
-        <asp:TextBox ID="txtpasswordconfirm" runat="server" Width="1288px" Height="27px" TextMode="Password"></asp:TextBox>
+        <asp:TextBox ID="txtpasswordconfirm" runat="server" Width="1000px" Height="27px" TextMode="Password"></asp:TextBox>
 &nbsp;</div>  
       <asp:Button class="w3-button w3-right w3-theme" ID="Button2" runat="server" Text="Submit" OnClick="Button2_Click" />
-          
+
     </div>
   </div>
 </div>
@@ -81,15 +87,15 @@
     </div>
     <div class="w3-col m7">
       <div class="w3-section">      
-        <label><i class="fa fa-envelope-o w3-text-teal w3-xlarge"></i>  Email</label>
-        <asp:TextBox ID="txtEmailsignin" runat="server" Width="1288px" Height="27px"></asp:TextBox>
+        <label><i class="fa fa-envelope-o w3-text-teal w3-xlarge"></i>  Email</label><br />
+        <asp:TextBox ID="txtEmailsignin" runat="server" Width="1000px" Height="27px"></asp:TextBox>
 &nbsp;</div>
       <div class="w3-section">      
-        <label><i class="fa fa-lock w3-text-teal w3-xlarge"></i>  Password</label>
-        <asp:TextBox ID="txtPasswordsignin" runat="server" Width="1288px" Height="27px" TextMode="Password"></asp:TextBox>
+        <label><i class="fa fa-lock w3-text-teal w3-xlarge"></i>  Password</label><br />
+        <asp:TextBox ID="txtPasswordsignin" runat="server" Width="1000px" Height="27px" TextMode="Password"></asp:TextBox>
 &nbsp;</div>  
         
-        <asp:Button  class="w3-button w3-right w3-theme" ID="Button1" runat="server" Text="Submit" OnClick="Button1_Click" />
+        <asp:Button  class="w3-button w3-right w3-theme" ID="Button1" runat="server" Text="Submit" OnClick="Button1_Click"  />
     </div>
          </div>
   </div>

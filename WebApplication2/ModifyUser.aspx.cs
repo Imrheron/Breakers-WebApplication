@@ -14,6 +14,21 @@ namespace WebApplication2
         string connectionstring = @"Data Source = tpisql01.avcol.school.nz; Initial Catalog = Gerrandatabase; Integrated Security = True;";
         protected void Page_Load(object sender, EventArgs e)
         {
+            if ((string)Session["abc"] == "samspen")
+            {
+                buttonprofile.Visible = true;
+                HyperLink1.Visible = false;
+                Button1.Visible = true;
+                Practice.Visible = true;
+            }
+            else
+            {
+                buttonprofile.Visible = false;
+                HyperLink1.Visible = true;
+                Button1.Visible = false;
+                Practice.Visible = false;
+            }
+
             Emaillbl.Text = (string)Session["GetEmail"];
             Passlbl.Text = (string)Session["GetPassword"];
             if (!IsPostBack)
@@ -51,6 +66,23 @@ namespace WebApplication2
         protected void txtemail_TextChanged(object sender, EventArgs e)
         {
             lblemailbox.Text = txtemail.Text;
+        }
+        protected void Signout_click(object sender, EventArgs e)
+        {
+            Session["abc"] = "signout";
+            buttonprofile.Visible = false;
+            HyperLink1.Visible = true;
+            Button1.Visible = false;
+            Practice.Visible = false;
+
+        }
+        protected void buttonprofile_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/ModifyUser.aspx");
+        }
+        protected void Practice_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/App.aspx");
         }
         protected void Save_Click(object sender, EventArgs e)
         {

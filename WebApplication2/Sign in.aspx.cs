@@ -16,18 +16,45 @@ namespace WebApplication2
         {
             if ((string)Session["abc"] == "samspen")
             {
-                profile.Visible = true;
+                buttonprofile.Visible = true;
                 HyperLink1.Visible = false;
+                Button3.Visible = true;
+                Practice.Visible = true;
+            }
+            else
+            {
+                buttonprofile.Visible = false;
+                HyperLink1.Visible = true;
+                Button3.Visible = false;
+                Practice.Visible = false;
             }
         }
+        protected void Practice_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/App.aspx");
+        }
 
+        protected void buttonprofile_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/ModifyUser.aspx");
+        }
+        protected void Signout_click(object sender, EventArgs e)
+        {
+            Session["abc"] = "signout";
+            buttonprofile.Visible = false;
+            HyperLink1.Visible = true;
+            Button1.Visible = false;
+            Practice.Visible = false;
 
+        }
         protected void Button2_Click(object sender, EventArgs e) //sign up code
         {
             {
+
                 if (txtUsername.Text == "" || txtEmail.Text == "" || txtPassword.Text == "" || txtPassword.Text != txtpasswordconfirm.Text) 
                     
-                    Response.Redirect("~/Signedup.aspx");
+                    Response.Redirect("~/Sign in.aspx");
+
                 else
                 {
                     using (SqlConnection sqlCon = new SqlConnection(connectionstring))
@@ -40,8 +67,10 @@ namespace WebApplication2
                         sqlCmd.Parameters.AddWithValue("@Password", txtPassword.Text.Trim());
                         sqlCmd.ExecuteNonQuery();
                         Session["abc"] = "samspen";
+                        Session["GetEmail"] = txtEmail.Text;
+                        Session["GetPassword"] = txtPassword.Text;
 
-                        Response.Redirect("~/Signedup.aspx");
+                        Response.Redirect("~/Homepage.aspx");
                         Clear();
                     }
                 }
@@ -69,7 +98,7 @@ namespace WebApplication2
                 Session["abc"] = "samspen";
                 Session["GetEmail"] = txtEmailsignin.Text;
                 Session["GetPassword"] = txtPasswordsignin.Text;
-                Response.Redirect("~/Signedup.aspx");
+                Response.Redirect("~/Homepage.aspx");
             }
             else
             {

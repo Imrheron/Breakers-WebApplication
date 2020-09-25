@@ -147,7 +147,6 @@
     <Content Include="ModifyUser.aspx" />
     <Content Include="Proapp.aspx" />
     <Content Include="Sign in.aspx" />
-    <Content Include="Signedup.aspx" />
     <Content Include="Homepage.aspx" />
     <Content Include="App.aspx" />
     <Content Include="Signout.aspx" />
@@ -254,13 +253,6 @@
     </Compile>
     <Compile Include="Sign in.aspx.designer.cs">
       <DependentUpon>Sign in.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Signedup.aspx.cs">
-      <DependentUpon>Signedup.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Signedup.aspx.designer.cs">
-      <DependentUpon>Signedup.aspx</DependentUpon>
     </Compile>
     <Compile Include="Signout.aspx.cs">
       <DependentUpon>Signout.aspx</DependentUpon>

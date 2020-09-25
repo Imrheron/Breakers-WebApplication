@@ -13,9 +13,38 @@ namespace WebApplication2
         {
             if ((string)Session["abc"] == "samspen")
             {
-                profile.Visible = true;
+                buttonprofile.Visible = true;
                 HyperLink1.Visible = false;
+                Button1.Visible = true;
+                Practice.Visible = true;
             }
+            else
+            {
+                buttonprofile.Visible = false;
+                HyperLink1.Visible = true;
+                Button1.Visible = false;
+                Practice.Visible = false;
+            }
+
+        }
+        protected void Signout_click(object sender, EventArgs e)
+        {
+            Session["abc"] = "signout";
+            buttonprofile.Visible = false;
+            HyperLink1.Visible = true;
+            Button1.Visible = false;
+            Practice.Visible = false;
+
+        }
+        protected void Practice_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/App.aspx");
+        }
+
+        protected void buttonprofile_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/ModifyUser.aspx");
         }
     }
+
 }

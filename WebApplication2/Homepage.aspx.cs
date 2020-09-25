@@ -41,17 +41,16 @@ namespace WebApplication2
         }
         protected void Openapp_click(object sender, EventArgs e)
         {
-            Response.Redirect("~/App.aspx");
+            if ((string)Session["abc"] == "samspen")
+            {
+                Response.Redirect("~/App.aspx");
+            }
+            else
+            {
+                Response.Redirect("~/Sign in.aspx");
+            }
         }
-        protected void Signout_click(object sender, EventArgs e)
-        {
-            Session["abc"] = "signout";
-            buttonprofile.Visible = false;
-            HyperLink1.Visible = true;
-            Button1.Visible = false;
-            Practice.Visible = false;
-
-        }
+        
         protected void Button2_Click(object sender, EventArgs e)
         {
             Response.Redirect("~/Videos.aspx");
@@ -70,10 +69,12 @@ namespace WebApplication2
                     sqlCmd.Parameters.AddWithValue("@Email", txtEmail.Text.Trim());
                     sqlCmd.Parameters.AddWithValue("@Password", txtPassword.Text.Trim());
                     sqlCmd.ExecuteNonQuery();
-                    Session["abc"] = "@UserID";
-                    Response.Redirect("~/Signedup.aspx");
+                    Session["abc"] = "samspen";
+                    Session["GetEmail"] = txtEmail.Text;
+                    Session["GetPassword"] = txtPassword.Text;
+
+                    Response.Redirect("~/Homepage.aspx");
                     Clear();
-                    
                 }
             }
         }
@@ -81,7 +82,15 @@ namespace WebApplication2
         {
             txtUsername.Text = txtEmail.Text = txtPassword.Text = "";
         }
+        protected void Signout_click(object sender, EventArgs e)
+        {
+            Session["abc"] = "signout";
+            buttonprofile.Visible = false;
+            HyperLink1.Visible = true;
+            Button1.Visible = false;
+            Practice.Visible = false;
 
+        }
         protected void Practice_Click(object sender, EventArgs e)
         {
             Response.Redirect("~/App.aspx");

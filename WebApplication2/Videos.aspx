@@ -16,16 +16,7 @@
     <title></title>
 </head>
 <body>
-   <nav class="w3-sidebar w3-bar-block w3-white w3-card w3-animate-left w3-xxlarge" style="display:none;z-index:2" id="mySidebar">
-  <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-display-topright w3-text-teal">Close
-    <i class="fa fa-remove"></i>
-  </a>
-  <a href="#" class="w3-bar-item w3-button">Link 1</a>
-  <a href="#" class="w3-bar-item w3-button">Link 2</a>
-  <a href="#" class="w3-bar-item w3-button">Link 3</a>
-  <a href="#" class="w3-bar-item w3-button">Link 4</a>
-  <a href="#" class="w3-bar-item w3-button">Link 5</a>
-</nav>
+    <form id="form1" runat="server">
 
 <!-- Navbar -->
 <div class="w3-top">
@@ -37,20 +28,13 @@
   <a href="/Merch.aspx" class="w3-bar-item w3-button w3-hide-small w3-hover-#00a3cc">Tickets</a>
      <asp:HyperLink ID="HyperLink1" href="/Sign in" runat="server" class="w3-bar-item w3-button w3-hide-small w3-hover-#00a3cc">Sign in</asp:HyperLink>
   
-     <asp:Label runat="server" id="profile" class="w3-right w3-dropdown-hover w3-hide-small" Visible="false">
-    <button class="w3-button" title="Notifications">Profile <i class=" fa fa-caret-down"></i></button>     
-    <div class="w3-dropdown-content w3-card-4 w3-bar-block">
-      <a href="#" class="w3-bar-item w3-button">Link</a>
-      <a href="#" class="w3-bar-item w3-button">Link</a>
-      <a href="#" class="w3-bar-item w3-button">Link</a>
-        <!-- Brooooooooooooooooooooo, edit your profile code needs to be done -->
+    <asp:Button runat="server" class="w3-bar-item w3-right w3-dropdown-hover w3-button" title="Notifications" Text="profile" OnClick="buttonprofile_Click" ID="buttonprofile" Visible="False" />     
+    
+        <asp:Button ID="Button1" class="w3-bar-item w3-right w3-dropdown-hover w3-button" runat="server" Text="Sign out" OnClick="Signout_click" />
+      <asp:Button ID="Practice" class="w3-bar-item w3-right w3-button" runat="server" Text="Use the App!" OnClick="Practice_Click" Visible="False" />
+        <!--  -->
     </div>
-        </asp:Label>
-  
-  <a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-teal" title="Search"><i class="fa fa-search"></i></a>
  </div>
-    <form id="form1" runat="server">
-        <div>
             <div class="w3-row-padding w3-padding-64 w3-theme-l1" id="work">
 
 <div class="w3-quarter">
@@ -237,7 +221,7 @@
 </div>
 </asp:Label>
 
-
+</div>
 </form>
 
 </body>
