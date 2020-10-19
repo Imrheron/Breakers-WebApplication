@@ -51,31 +51,40 @@
 
 <div class="w3-quarter">
   <div class="container">
-  <img src="Images/Ater Majok.png" alt="Ater Majok" style="width:150%; height: 550px;">
-  <div class="centered" style="background-color:cornflowerblue;height:100px;width:100px">BOTTOM TEXT</div>
+  <img src="Images\Player Images\BREAKERS_01_TomAbercrombie_1267.png" alt="Tom Abercrombie" style="width:100%; height: 550px;border:groove 2px black;">
+<p style="color:black;font-size:xx-large;border:2px solid cornflowerblue;">Tom Abercrombie</p>
 </div>
 </div>
 
 <div class="w3-quarter">
   <div class="container">
-  <img src="Images/Ater Majok.png" alt="Ater Majok" style="width:81%; height: 600px;">
-  <div class="centered" style="background-color:cornflowerblue;height:100px;width:100px">South TEXT</div>
+  <img src="Images\Player Images\BREAKERS_02_CoreyWebster_2813.png" alt="Corey Webster" style="width:100%; height: 550px;">
+<p style="color:black;font-size:xx-large;border:2px solid cornflowerblue;">Corey Webster</p>
 </div>
 </div>
 
 <div class="w3-quarter">
   <div class="container">
-  <img src="Images/Ater Majok.png" alt="Ater Majok" style="width:81%; height: 700px;">
-  <div class="centered" style="background-color:cornflowerblue;height:100px;width:100px">180 degree from north TEXT</div>
+  <img src="Images\Player Images\BREAKERS_03_FinnDelany_3065.png" alt="Finn Delany" style="width:100%; height: 550px;">
+<p style="color:black;font-size:xx-large;border:2px solid cornflowerblue;">Finn Delany</p>
 </div>
 </div>
 
 <div class="w3-quarter">
   <div class="container">
-  <img src="Images/Ater Majok.png" alt="Ater Majok" style="width:81%; height: 850px;">
-  <div class="centered" style="background-color:cornflowerblue;height:100px;width:100px">Southwardly TEXT</div>
+  <img src="Images\Player Images\BREAKERS_04_TomVodanovich_5271.png" alt="Tom Vodanovich" style="width:100%; height: 550px;">
+<p style="color:black;font-size:xx-large;border:2px solid cornflowerblue;">Tom Vodanovich</p>
 </div>
 </div>
+
+    <div class="w3-quarter">
+  <div class="container">
+  <img src="Images\Player Images\BREAKERS_05_JordanNgatai_6592.png" alt="Jordan Ngatai" style="width:100%; height: 550px;">
+<p style="color:black;font-size:xx-large;border:2px solid cornflowerblue;">Jordan Ngatai</p>
+</div>
+</div>
+
+
 
 </div>
 </div>

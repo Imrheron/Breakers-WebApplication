@@ -51,10 +51,11 @@ namespace WebApplication2
         {
             {
 
-                if (txtUsername.Text == "" || txtEmail.Text == "" || txtPassword.Text == "" || txtPassword.Text != txtpasswordconfirm.Text) 
-                    
+                if (txtUsername.Text == "" || txtEmail.Text == "" || txtPassword.Text == "" || txtPassword.Text != txtpasswordconfirm.Text)
+                {
                     Response.Redirect("~/Sign in.aspx");
-
+                    Someonedidntinputalltheirvalues.Visible = true;
+                }
                 else
                 {
                     using (SqlConnection sqlCon = new SqlConnection(connectionstring))
@@ -102,6 +103,7 @@ namespace WebApplication2
             }
             else
             {
+                Someonedidntinputalltheirvalues.Visible = true;
                 Response.Redirect("~/Sign in.aspx");
             }
         }

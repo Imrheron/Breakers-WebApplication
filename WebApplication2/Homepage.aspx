@@ -185,17 +185,18 @@
     <div class="w3-padding-16"><span class="w3-xlarge w3-border-teal w3-bottombar">Learn to play basketball from our app!</span></div>
       <h3>Get all the best training and fitness tips with our app</h3>
       <p>Our app gives you the opportunity to train and keep fit just like one of the breakers! just follow the guide to perfect your chosen skill!</p>
+    <h6>*note must have an existing account to access the app</h6>
         <asp:Button ID="Openapp" class="w3-button w3-theme" runat="server" Text="Get the app!" OnClick="Openapp_click" />
     </div>
 
 <!-- Footer -->
 <footer class="w3-container w3-padding-32 w3-theme-d1 w3-center">
-    <img class="w3-left" src="https://www.repco.co.nz/medias/logo-repco.png?context=bWFzdGVyfGltYWdlc3wxMzA1MXxpbWFnZS9wbmd8c3lzLW1hc3Rlci9pbWFnZXMvaDU3L2gyYi84Nzk2MTcyNzE0MDE0L2xvZ28tcmVwY28ucG5nfDM4MTNjOTExMTc4Mzk3NTVmMDU3NGVjZWY3OTEyZTIwMzY1MDc5M2E4YTVjZjMwOGVmN2NmZDEyMzY4MGU1OTE" width="10" height="8"  />
+    
   <h4>Follow Us</h4>
-  <a class="w3-button w3-large w3-teal" href="https://www.facebook.com/TheNBL" title="Facebook"><i class="fa fa-facebook"></i></a>
-  <a class="w3-button w3-large w3-teal" href="https://www.twitter.com/nbl" title="Twitter"><i class="fa fa-twitter"></i></a>
-  <a class="w3-button w3-large w3-teal" href="https://www.instagram.com/nbl" title="Google +"><i class="fa fa-instagram"></i></a>
-  <a class="w3-button w3-large w3-teal w3-hide-small" href="https://www.twitch.tv/nbl" title="Twitch"><i class="fa fa-twitch"></i></a>
+  <a class="w3-button w3-large w3-teal" href="https://www.facebook.com/TheNBL" title="NBL Facebook page "><i class="fa fa-facebook"></i></a>
+  <a class="w3-button w3-large w3-teal" href="https://www.twitter.com/nbl" title="NBL Twitter page"><i class="fa fa-twitter"></i></a>
+  <a class="w3-button w3-large w3-teal" href="https://www.instagram.com/nbl" title="NBL Instagram page"><i class="fa fa-instagram"></i></a>
+  <a class="w3-button w3-large w3-teal w3-hide-small" href="https://www.twitch.tv/nbl" title="NBL Twitch page"><i class="fa fa-twitch"></i></a>
   <p>Made by Gerran</p>
 
   <div style="position:relative;bottom:100px;z-index:1;" class="w3-tooltip w3-right">
