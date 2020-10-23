@@ -11,7 +11,7 @@
         font-family: "Arial Black", Gadget, sans-serif;
     }
 </style>
-<html xmlns="http://www.w3.org/1999/xhtml"
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title></title>
 </head>
@@ -64,65 +64,66 @@
             </asp:Label>
 
             <asp:Button ID="Start" runat="server" OnClick="Button1_click" Text="lets start!" Style="background-color: white; color: dodgerblue; border: 2px solid dodgerblue;" class="w3-button w3-left" />
-            <asp:Label ID="Label10" class="w3-top" runat="server" Visible="false" Text="Points:">
-                <asp:Label ID="Label1" class="w3-quarter" runat="server" Visible="false" Text="">
+            <asp:Label ID="Points" class="w3-half" runat="server" Visible="false" Text="Points:" Font-Size="X-Large"></asp:Label>
+            <asp:Label ID="Format" Class="w3-half" runat="server" Visible="false" Text="Test" ForeColor="#333333" Font-Size="X-Large"></asp:Label>
+            <asp:Label ID="Label1" class="w3-quarter" runat="server" Visible="false" Text="">
 <h2>First stretches</h2>
 <p>start by doing lunges, spend at least 10 seconds on one leg, then swap to the other leg.</p>
-                </asp:Label>
+            </asp:Label>
 
-                <asp:Image class="w3-quarter" ID="Image1" ImageUrl="~/Images/lunge clipart.jpg" Visible="false" runat="server" Height="370px" Width="425px" />
+            <asp:Image class="w3-quarter" ID="Image1" ImageUrl="~/Images/lunge clipart.jpg" Visible="false" runat="server" Height="370px" Width="425px" />
 
-                <asp:Label ID="Label3" class="w3-quarter" runat="server" Visible="false" Text="">
+            <asp:Label ID="Label3" class="w3-quarter" runat="server" Visible="false" Text="">
 <p>Then move on to a quad stretch, while standing, make sure to keep your back straight, and hold each leg for at least 10 seconds.</p>
-                </asp:Label>
+            </asp:Label>
 
-                <asp:Image class="w3-quarter" ID="Image2" ImageUrl="~/Images/Quad stretch.jpg" Visible="false" runat="server" Height="370px" Width="455px" />
+            <asp:Image class="w3-quarter" ID="Image2" ImageUrl="~/Images/Quad stretch.jpg" Visible="false" runat="server" Height="370px" Width="455px" />
 
-                <asp:Button ID="Button2" runat="server" OnClick="Button2_click" Text="Next" Style="background-color: white; color: dodgerblue; border: 2px solid dodgerblue;" class="w3-button w3-right" Visible="false" />
+            <asp:Button ID="Button2" runat="server" OnClick="Button2_click" Text="Next" Style="background-color: white; color: dodgerblue; border: 2px solid dodgerblue;" class="w3-button w3-right" Visible="false" />
 
-                <asp:Label ID="Label4" class="w3-quarter" runat="server" Visible="false" Text="">
+            <asp:Label ID="Label4" class="w3-quarter" runat="server" Visible="false" Text="">
 <p>Now start jogging, either on the spot, or around the room. <br />Do this for a minute.</p>
-                </asp:Label>
+            </asp:Label>
 
-                <asp:Image class="w3-quarter" ID="Image3" ImageUrl="~/Images/Jogging silhouette 2.png" Visible="false" runat="server" Height="370px" Width="425px" />
+            <asp:Image class="w3-quarter" ID="Image3" ImageUrl="~/Images/Jogging silhouette 2.png" Visible="false" runat="server" Height="370px" Width="425px" />
 
-                <asp:Label ID="Label5" class="w3-quarter" runat="server" Visible="false" Text="">
+            <asp:Label ID="Label5" class="w3-quarter" runat="server" Visible="false" Text="">
 <p>Watch this video to get a better understanding of the basketball rules <br />Or click next if you already </p>
-                </asp:Label>
+            </asp:Label>
 
-                <asp:Label ID="Label6" runat="server" Style="width: 455px; height: 340px;" Visible="false" class="w3-quarter">
+            <asp:Label ID="Label6" runat="server" Style="width: 455px; height: 340px;" Visible="false" class="w3-quarter">
 <div class="w3-card w3-white">
   <div class="w3-container">
   <h3>Beginners tips for Passing</h3>
   <iframe width="410" height="270" src="https://www.youtube.com/embed/PukmYnApL2Y" frameborder="0" allowfullscreen="true" ></iframe>
   </div>
 </div>
-                </asp:Label>
+            </asp:Label>
 
-                <asp:Label ID="Label7" runat="server" Visible="false" class="w3-third">
+            <asp:Label ID="Label7" runat="server" Visible="false" class="w3-third">
 <div class="w3-card w3-white">
   <div class="w3-container">
   <h3 class="w3-center">Beginners tips for Passing</h3>
   <iframe width="580" height="345" src="https://www.youtube.com/embed/PukmYnApL2Y" frameborder="0" allowfullscreen="true" ></iframe>
   </div>
 </div>
-                </asp:Label>
-                <asp:Label ID="Label8" runat="server" Visible="false" class="w3-third">
+            </asp:Label>
+            <asp:Label ID="Label8" runat="server" Visible="false" class="w3-third">
 <div class="w3-card w3-white">
   <div class="w3-container">
   <h3 class="w3-center">Beginners tips for Passing</h3>
   <iframe width="580" height="345" src="https://www.youtube.com/embed/PukmYnApL2Y" frameborder="0" allowfullscreen="true" ></iframe>
   </div>
 </div>
-                </asp:Label>
-                <asp:Label ID="Label9" runat="server" Visible="false" class="w3-third">
+            </asp:Label>
+            <asp:Label ID="Label9" runat="server" Visible="false" class="w3-third">
 <div class="w3-card w3-white">
   <div class="w3-container">
   <h3 class="w3-center">Beginners tips for Passing</h3>
   <iframe width="580" height="345" src="https://www.youtube.com/embed/PukmYnApL2Y" frameborder="0" allowfullscreen="true" ></iframe>
   </div>
 </div>
-                </asp:Label>
+            </asp:Label>
     </form>
 
 </body>

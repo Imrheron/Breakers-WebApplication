@@ -47,13 +47,13 @@ namespace WebApplication2
             Practice.Visible = false;
 
         }
-        protected void Button2_Click(object sender, EventArgs e) //sign up code
+        protected void Button2_Click(object sender, EventArgs e) //Sign up code
         {
-            {
+            
 
                 if (txtUsername.Text == "" || txtEmail.Text == "" || txtPassword.Text == "" || txtPassword.Text != txtpasswordconfirm.Text)
                 {
-                    Response.Redirect("~/Sign in.aspx");
+                    Clear();
                     Someonedidntinputalltheirvalues.Visible = true;
                 }
                 else
@@ -75,37 +75,45 @@ namespace WebApplication2
                         Clear();
                     }
                 }
-            }
-            void Clear()
-            {
-                txtUsername.Text = txtEmail.Text = txtPassword.Text = "";
-            }
-
+            
         }
         protected void Button1_Click(object sender, EventArgs e) //Sign in code
         {
-            SqlConnection sqlcon = new SqlConnection(@"Data Source = tpisql01.avcol.school.nz; Initial Catalog = Gerrandatabase; Integrated Security = True;");
-            SqlConnection con = new SqlConnection(connectionstring);
-            SqlDataAdapter sqa = new SqlDataAdapter("Select UserID From tblUser where Email = '" + txtEmailsignin.Text + "' and Password = '" + txtPasswordsignin.Text + "'", con);
-            System.Data.DataTable dtbl = new System.Data.DataTable();
-            sqa.Fill(dtbl);
-            if (dtbl.Rows.Count > 0)
+            SqlConnection sqlcon = new SqlConnection(@"Data Source = tpisql01.avcol.school.nz; Initial Catalog = Gerrandatabase; Integrated Security = True;"); //defines the Sql connection to connect to the database
+            SqlConnection con = new SqlConnection(connectionstring); 
+            SqlDataAdapter sqa = new SqlDataAdapter("Select UserID From tblUser where Email = '" + txtEmailsignin.Text + "' and Password = '" + txtPasswordsignin.Text + "'", con); //gets user ID based on the info provided by user, in this case, email and password
+            System.Data.DataTable dtbl = new System.Data.DataTable(); //defines new datatable
+            sqa.Fill(dtbl); //fills datatable using parameters stated in the DataAdapter, from the database
+            if (txtEmailsignin.Text == "" || txtPasswordsignin.Text == "")
             {
-                if (sqlcon.State == ConnectionState.Closed)
-                    sqlcon.Open();
-                SqlCommand sqlCmd = new SqlCommand("UserCreateOrUpdate", sqlcon);
+                ClearSignIn();
+                SignInValuesWrong.Visible = true;
+            }           
+            else if (dtbl.Rows.Count > 0) //If the number of rows in the datatable is greater than 0, it executes the given statement, 
+            {
+                if (sqlcon.State == ConnectionState.Closed) 
+                    sqlcon.Open(); //opens connection with database
+                SqlCommand sqlCmd = new SqlCommand("UserCreateOrUpdate", sqlcon); //defines which sql querie to be used
                 sqlCmd.CommandType = CommandType.StoredProcedure;
-                sqlCmd.Parameters.AddWithValue("@UserID", (HField1.Value == "" ? 0 : Convert.ToInt32(HField1.Value)));
-                Session["abc"] = "samspen";
-                Session["GetEmail"] = txtEmailsignin.Text;
-                Session["GetPassword"] = txtPasswordsignin.Text;
-                Response.Redirect("~/Homepage.aspx");
+                sqlCmd.Parameters.AddWithValue("@UserID", (HField1.Value == "" ? 0 : Convert.ToInt32(HField1.Value))); //gets userID and places it into a hiddenfield in the signin page
+                Session["abc"] = "samspen"; //creates session variable to show all features after signing in
+                Session["GetEmail"] = txtEmailsignin.Text; //creates session variable to get email if the user decides to modify their account
+                Session["GetPassword"] = txtPasswordsignin.Text; //creates session variable to get password if the user decides to modify their account
+                Response.Redirect("~/Homepage.aspx"); //redirects them to the home page after signing in
             }
             else
             {
-                Someonedidntinputalltheirvalues.Visible = true;
-                Response.Redirect("~/Sign in.aspx");
+                SignInValuesWrong.Visible = true; //shows label 
+                ClearSignIn();
             }
+        }
+        void Clear()
+        {
+            txtUsername.Text = txtEmail.Text = txtPassword.Text = "";
+        }
+        void ClearSignIn()
+        {
+            txtPasswordsignin.Text = txtEmailsignin.Text = "";
         }
     }
 }

@@ -55,7 +55,7 @@
 </style>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> <!-- bootstraps to make my life easier -->
 <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <html>
@@ -81,14 +81,6 @@
     </div>
  </div>
 
-  <!-- Navbar on small screens -->
-  <div id="navDemo" class="w3-bar-block w3-theme-d2 w3-hide w3-hide-large w3-hide-medium">
-    <a href="#team" class="w3-bar-item w3-button" >Team</a>
-    <a href="#work" class="w3-bar-item w3-button">Work</a>
-    <a href="#pricing" class="w3-bar-item w3-button">Price</a>
-    <a href="#contact" class="w3-bar-item w3-button">Contact</a>
-    <a href="#" class="w3-bar-item w3-button">Search</a>
-  </div>
 
 <!-- Image Header -->
 <div id="example1" class="w3-display-container w3-animate-opacity">
@@ -98,23 +90,6 @@
   </div>
 </div>
 
-<!-- Modal -->
-<div id="id01" class="w3-modal">
-  <div class="w3-modal-content w3-card-4 w3-animate-top">
-    <header class="w3-container w3-blue w3-display-container"> 
-      <span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-teal w3-display-topright"><i class="fa fa-remove"></i></span>
-      <h4></h4>
-      <h5>Because we can <i class="fa fa-smile-o"></i></h5>
-    </header>
-    <div class="w3-container">
-      <p>Cool huh? Ok, enough teasing around..</p>
-      <p>Go to our <a class="w3-text-teal" href="/w3css/default.asp">W3.CSS Tutorial</a> to learn more!</p>
-    </div>
-    <footer class="w3-container w3-teal">
-      <p>Modal footer</p>
-    </footer>
-  </div>
-</div>
 <!-- video snippet -->
           <div class="w3-quarter">
 <div class="w3-card w3-white">
@@ -154,7 +129,7 @@
 </div>
     <asp:Button ID="Button2" runat="server" OnClick="Button2_Click" Text="View More!" style="background-color:white; color:dodgerblue; border: 2px solid dodgerblue;" class="w3-button w3-right"/>
 
-<!-- Contact Container -->
+<!-- Sign in Container -->
 <div class="w3-container w3-padding-64 w3-theme-l5" id="contact">
   <div class="w3-row">
     <div class="w3-col m5">
@@ -180,6 +155,7 @@
       
   </div>
 </div>
+
 <!-- Open App -->
 <div class="w3-row-padding w3-center w3-padding-64" id="app">
     <div class="w3-padding-16"><span class="w3-xlarge w3-border-teal w3-bottombar">Learn to play basketball from our app!</span></div>
@@ -188,7 +164,7 @@
     <h6>*note must have an existing account to access the app</h6>
         <asp:Button ID="Openapp" class="w3-button w3-theme" runat="server" Text="Get the app!" OnClick="Openapp_click" />
     </div>
-
+          
 <!-- Footer -->
 <footer class="w3-container w3-padding-32 w3-theme-d1 w3-center">
     
@@ -229,6 +205,7 @@
             x.className = x.className.replace(" w3-show", "");
         }
     }
+
 </script>
 
     </form>

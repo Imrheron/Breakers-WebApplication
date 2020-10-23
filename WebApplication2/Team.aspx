@@ -6,11 +6,67 @@
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+.container {
+  position: relative;
+  width: 100%;
+}
+
+.image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+ /* transition: .5s ease; */
+  /*background-color: #008CBA;*/
+}
+
+.container .overlay {
+  opacity: 1;
+}
+
+.first {
+  color: white;
+  font-size: 30px;
+  position: absolute;
+  top: 10%;
+  left: 17%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: left;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    
+}
+.last {
+  color: white;
+  font-size: 30px;
+  position: absolute;
+  top: 20%;
+  left: 17%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: left;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+}
+</style>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title></title>
 </head>
-<body>
+
+<body style="background-color:black;">
     <nav class="w3-sidebar w3-bar-block w3-white w3-card w3-animate-left w3-xxlarge" style="display:none;z-index:2" id="mySidebar">
   <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-display-topright w3-text-teal">Close
     <i class="fa fa-remove"></i>
@@ -49,41 +105,52 @@
 
 <div class="w3-row"><br>
 
-<div class="w3-quarter">
+<div class="w3-third">
   <div class="container">
-  <img src="Images\Player Images\BREAKERS_01_TomAbercrombie_1267.png" alt="Tom Abercrombie" style="width:100%; height: 550px;border:groove 2px black;">
-<p style="color:black;font-size:xx-large;border:2px solid cornflowerblue;">Tom Abercrombie</p>
+  <img src="Images\Player Images\BREAKERS_01_TomAbercrombie_1267.png" alt="Tom Abercrombie" class="image" style="width:80%; height: 550px;border:groove 2px cornflowerblue;">
+     <div class="overlay">
+    <div class="first">Tom </div>
+         <div class="last">Abercrombie </div>
+
+  </div>
+
 </div>
 </div>
 
-<div class="w3-quarter">
+<div class="w3-third">
   <div class="container">
-  <img src="Images\Player Images\BREAKERS_02_CoreyWebster_2813.png" alt="Corey Webster" style="width:100%; height: 550px;">
-<p style="color:black;font-size:xx-large;border:2px solid cornflowerblue;">Corey Webster</p>
+  <img src="Images\Player Images\BREAKERS_02_CoreyWebster_2813.png" alt="Corey Webster" style="width:80%; height: 550px;border:groove 2px cornflowerblue;">
+<h2 style="color:black;font-size:xx-large;border:2px solid cornflowerblue;">Corey Webster</h2>
 </div>
 </div>
 
-<div class="w3-quarter">
+<div class="w3-third">
   <div class="container">
-  <img src="Images\Player Images\BREAKERS_03_FinnDelany_3065.png" alt="Finn Delany" style="width:100%; height: 550px;">
-<p style="color:black;font-size:xx-large;border:2px solid cornflowerblue;">Finn Delany</p>
+  <img src="Images\Player Images\BREAKERS_03_FinnDelany_3065.png" alt="Finn Delany" style="width:80%; height: 550px;border:groove 2px black;">
+<h2 style="color:black;font-size:xx-large;border:2px solid cornflowerblue;">Finn Delany</h2>
 </div>
 </div>
 
-<div class="w3-quarter">
+<div class="w3-third">
   <div class="container">
-  <img src="Images\Player Images\BREAKERS_04_TomVodanovich_5271.png" alt="Tom Vodanovich" style="width:100%; height: 550px;">
-<p style="color:black;font-size:xx-large;border:2px solid cornflowerblue;">Tom Vodanovich</p>
+  <img src="Images\Player Images\BREAKERS_04_TomVodanovich_5271.png" alt="Tom Vodanovich" style="width:80%; height: 550px;border:groove 2px black;">
+<h2 style="color:black;font-size:xx-large;border:2px solid cornflowerblue;">Tom Vodanovich</h2>
 </div>
 </div>
 
-    <div class="w3-quarter">
+    <div class="w3-third">
   <div class="container">
-  <img src="Images\Player Images\BREAKERS_05_JordanNgatai_6592.png" alt="Jordan Ngatai" style="width:100%; height: 550px;">
-<p style="color:black;font-size:xx-large;border:2px solid cornflowerblue;">Jordan Ngatai</p>
+  <img src="Images\Player Images\BREAKERS_05_JordanNgatai_6592.png" alt="Jordan Ngatai" style="width:80%; height: 550px;border:groove 2px black;">
+<h2 style="color:black;font-size:xx-large;border:2px solid cornflowerblue;">Jordan Ngatai</h2>
 </div>
 </div>
 
+    <div class="w3-third">
+  <div class="container">
+  <img src="C:\Users\ac94093\source\repos\WebApplication2\WebApplication2\Images\Player Images\BREAKERS_06_RobLoe_7860.png" alt="Rob Loe" style="width:80%; height: 550px;border:groove 2px black;">
+<h2 style="color:black;font-size:xx-large;border:2px solid cornflowerblue;">Rob Loe</h2>
+</div>
+</div>
 
 
 </div>

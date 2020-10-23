@@ -62,10 +62,10 @@ namespace WebApplication2
             else {
                 using (SqlConnection sqlCon = new SqlConnection(connectionstring))
                 {
-                    sqlCon.Open();
-                    SqlCommand sqlCmd = new SqlCommand("UserAdd", sqlCon);
-                    sqlCmd.CommandType = System.Data.CommandType.StoredProcedure;
-                    sqlCmd.Parameters.AddWithValue("@Username", txtUsername.Text.Trim());
+                    sqlCon.Open(); //open a connection with the SQL database
+                    SqlCommand sqlCmd = new SqlCommand("UserAdd", sqlCon); //defines new sql command
+                    sqlCmd.CommandType = System.Data.CommandType.StoredProcedure; //defines the command as a stored procedure
+                    sqlCmd.Parameters.AddWithValue("@Username", txtUsername.Text.Trim()); //defines the username as the value contained within 
                     sqlCmd.Parameters.AddWithValue("@Email", txtEmail.Text.Trim());
                     sqlCmd.Parameters.AddWithValue("@Password", txtPassword.Text.Trim());
                     sqlCmd.ExecuteNonQuery();
@@ -74,6 +74,7 @@ namespace WebApplication2
                     Session["GetPassword"] = txtPassword.Text;
 
                     Response.Redirect("~/Homepage.aspx");
+                    
                     Clear();
                 }
             }

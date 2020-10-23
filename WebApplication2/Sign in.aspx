@@ -77,6 +77,7 @@
                         <asp:TextBox ID="txtpasswordconfirm" runat="server" Width="1000px" Height="27px" TextMode="Password"></asp:TextBox>
                         &nbsp;
                     </div>
+                    <asp:Label ID="Someonedidntinputalltheirvalues" runat="server" Text="Incorrect values, please try again." style="color:red;" Visible="false"></asp:Label>
                     <asp:Button class="w3-button w3-right w3-theme" ID="Button2" runat="server" Text="Submit" OnClick="Button2_Click" />
 
                 </div>
@@ -102,7 +103,7 @@
                         <asp:TextBox ID="txtPasswordsignin" runat="server" Width="1000px" Height="27px" TextMode="Password"></asp:TextBox>
                         &nbsp;
                     </div>
-                    <asp:Label ID="Someonedidntinputalltheirvalues" runat="server" Text="Please fill out all forms" style="color:red;" Visible="false"></asp:Label>
+                    <asp:Label ID="SignInValuesWrong" runat="server" Text="Incorrect values, please try again." style="color:red;" Visible="false"></asp:Label>
                     <asp:Button class="w3-button w3-right w3-theme" ID="Button1" runat="server" Text="Submit" OnClick="Button1_Click" />
                 </div>
             </div>

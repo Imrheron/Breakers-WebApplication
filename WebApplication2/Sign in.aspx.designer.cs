@@ -96,6 +96,15 @@ namespace WebApplication2
         protected global::System.Web.UI.WebControls.TextBox txtpasswordconfirm;
 
         /// <summary>
+        /// Someonedidntinputalltheirvalues control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Someonedidntinputalltheirvalues;
+
+        /// <summary>
         /// Button2 control.
         /// </summary>
         /// <remarks>
@@ -132,13 +141,13 @@ namespace WebApplication2
         protected global::System.Web.UI.WebControls.TextBox txtPasswordsignin;
 
         /// <summary>
-        /// Someonedidntinputalltheirvalues control.
+        /// SignInValuesWrong control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Someonedidntinputalltheirvalues;
+        protected global::System.Web.UI.WebControls.Label SignInValuesWrong;
 
         /// <summary>
         /// Button1 control.
