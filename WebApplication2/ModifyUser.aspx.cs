@@ -11,7 +11,9 @@ namespace WebApplication2
 {
     public partial class ModifyUser : System.Web.UI.Page
     {
+
         string connectionstring = @"Data Source = tpisql01.avcol.school.nz; Initial Catalog = Gerrandatabase; Integrated Security = True;";
+
         protected void Page_Load(object sender, EventArgs e)
         {
             if ((string)Session["abc"] == "samspen")
@@ -50,7 +52,7 @@ namespace WebApplication2
 
                 }
             }
-            
+
             lbluserbox.Text = txtusername.Text;
             lblpassbox.Text = txtpassword.Text;
             lblemailbox.Text = txtemail.Text;
@@ -84,7 +86,7 @@ namespace WebApplication2
         {
             Response.Redirect("~/App.aspx");
         }
-        protected void Save_Click(object sender, EventArgs e)
+        protected void Save_Click(object sender, EventArgs e) //saves the profle if they have inputted all their variables
         {
             if (txtusername.Text == "" || txtemail.Text == "" || txtpassword.Text == "" || txtpasswordconfirm.Text == "" || txtpassword.Text != txtpasswordconfirm.Text)
             {
@@ -109,5 +111,26 @@ namespace WebApplication2
                 }
             }
         }
+        protected void btndelete_Click(object sender, EventArgs e) //deletes profile using the sql storedprocedure
+        {
+            using (SqlConnection sqlcon = new SqlConnection(connectionstring))
+                if (sqlcon.State == ConnectionState.Closed)
+                {
+                    sqlcon.Open();
+                    SqlCommand sqlCmd = new SqlCommand("UserDeleteByID", sqlcon);
+                    sqlCmd.CommandType = CommandType.StoredProcedure;
+                    sqlCmd.Parameters.AddWithValue("@UserID", UserIDnumber.Text.Trim());
+                    sqlCmd.ExecuteNonQuery();
+                    sqlcon.Close();
+                    Session["abc"] = "signout";
+                    buttonprofile.Visible = false;
+                    HyperLink1.Visible = true;
+                    Button1.Visible = false;
+                    Practice.Visible = false;
+                    Response.Redirect("~/Homepage.aspx");
+                   
+                }
+        }
+
     }
 }

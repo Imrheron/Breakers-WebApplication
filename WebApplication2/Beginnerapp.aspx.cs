@@ -14,23 +14,7 @@ namespace WebApplication2
         //string connectionstring = @"Data Source = tpisql01.avcol.school.nz; Initial Catalog = Gerrandatabase; Integrated Security = True;";
         protected void Page_Load(object sender, EventArgs e)
         {
-            /*  Session["beginner"] = "beginner";
-              using (SqlConnection sqlCon = new SqlConnection(connectionstring))
-              {
-                  sqlCon.Open();
-                  SqlCommand sqlCmd = new SqlCommand("UserAdd", sqlCon);
-                  sqlCmd.CommandType = System.Data.CommandType.StoredProcedure;
-                  sqlCmd.Parameters.AddWithValue("@Username", txtUsername.Text.Trim());
-                  sqlCmd.Parameters.AddWithValue("@Email", txtEmail.Text.Trim());
-                  sqlCmd.Parameters.AddWithValue("@Password", txtPassword.Text.Trim());
-                  sqlCmd.ExecuteNonQuery();
-                  Session["abc"] = "samspen";
-                  Session["GetEmail"] = txtEmail.Text;
-                  Session["GetPassword"] = txtPassword.Text;
-
-                  Response.Redirect("~/Homepage.aspx");
-                  Clear(); 
-              }*/
+            
         }
 
         protected void Button1_click(object sender, EventArgs e)

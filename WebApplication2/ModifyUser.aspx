@@ -67,7 +67,7 @@
         <asp:Label ID="Emaillbl" runat="server" Text="" Visible="false"></asp:Label>
         <asp:Label ID="Passlbl" runat="server" Text="" Visible="false"></asp:Label>
         <asp:Button ID="Save" runat="server" OnClick="Save_Click" Text="Update profile" Style="background-color: white; color: dodgerblue; border: 2px solid dodgerblue;" class="w3-button w3-left" />
-
+        <asp:Button ID="btndelete" runat="server" OnClick="btndelete_Click" Text="Delete profile" Style="background-color: white; color: red; border: 2px solid red;" class="w3-button w3-right" />
         <asp:Label ID="lbluserbox" runat="server" Text="" Visible="false"></asp:Label>
         <asp:Label ID="lblemailbox" runat="server" Text="" Visible="false"></asp:Label>
         <asp:Label ID="lblpassbox" runat="server" Text="" Visible="false"></asp:Label>
