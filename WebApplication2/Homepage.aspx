@@ -150,6 +150,7 @@
         <label><i class="fa fa-lock w3-text-teal w3-xlarge"></i>  Password</label>
         <asp:TextBox ID="txtPassword" runat="server" Width="1100px" Height="27px"></asp:TextBox>
 &nbsp;</div>  
+        <asp:Label ID="Someonedidntinputalltheirvalues" runat="server" Text=""></asp:Label>
         <asp:Button ID="AddUser" class="w3-right w3-button w3-theme" runat="server" Text="Sign Up!" OnClick="AddUser_Click" />
     </div>
       

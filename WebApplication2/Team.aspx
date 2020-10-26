@@ -98,7 +98,7 @@
  </div>
         <div>
         </div>
-    </form>
+    
     <div class="w3-container w3-padding-64 w3-center" id="team">
 <h2>OUR TEAM</h2>
 <p>Meet the team - our office rats:</p>
@@ -155,6 +155,6 @@
 
 </div>
 </div>
-
+    </form>
 </body>
 </html>

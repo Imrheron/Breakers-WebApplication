@@ -58,8 +58,13 @@ namespace WebApplication2
         public void AddUser_Click(object sender, EventArgs e)
         {
             if (txtUsername.Text == "" || txtEmail.Text == "" || txtPassword.Text == "")
-                Response.Redirect("~/WebForm1.aspx");
-            else {
+            {
+                Clear();
+                Someonedidntinputalltheirvalues.Text = "please fill in all fields";
+                Someonedidntinputalltheirvalues.Visible = true; //Checks if the user has inputted values in all textboxes
+            }
+            else
+            {
                 using (SqlConnection sqlCon = new SqlConnection(connectionstring))
                 {
                     sqlCon.Open(); //open a connection with the SQL database
@@ -69,12 +74,12 @@ namespace WebApplication2
                     sqlCmd.Parameters.AddWithValue("@Email", txtEmail.Text.Trim());
                     sqlCmd.Parameters.AddWithValue("@Password", txtPassword.Text.Trim());
                     sqlCmd.ExecuteNonQuery();
-                    Session["abc"] = "samspen";
+                    Session["abc"] = "samspen"; //creates session variables to carry over to other webforms
                     Session["GetEmail"] = txtEmail.Text;
                     Session["GetPassword"] = txtPassword.Text;
 
                     Response.Redirect("~/Homepage.aspx");
-                    
+
                     Clear();
                 }
             }
@@ -85,7 +90,7 @@ namespace WebApplication2
         }
         protected void Signout_click(object sender, EventArgs e)
         {
-            Session["abc"] = "signout";
+            Session["abc"] = "signout"; 
             buttonprofile.Visible = false;
             HyperLink1.Visible = true;
             Button1.Visible = false;
