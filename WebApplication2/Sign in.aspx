@@ -7,16 +7,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title></title>
-     <script>
-        $(function () {
-            $(document).keypress(function (e) {
-                if (e.keyCode == 13) {
-                    //for when users press enter
-                    $("Button1").click();
-                }
-            });
-        })
-    </script>
+
 </head>
 <body>
     <form id="form1" runat="server">
@@ -43,7 +34,7 @@
 
                 <asp:Button runat="server" class="w3-bar-item w3-right w3-dropdown-hover w3-button" title="Notifications" Text="profile" OnClick="buttonprofile_Click" ID="buttonprofile" Visible="False" />
 
-                <asp:Button ID="Button3" class="w3-bar-item w3-right w3-dropdown-hover w3-button" runat="server" Text="Sign out" OnClick="Signout_click" />
+                <asp:Button ID="Button3" class="w3-bar-item w3-right w3-hide-small  w3-dropdown-hover w3-button" runat="server" Text="Sign out" OnClick="Signout_click" />
                 <asp:Button ID="Practice" class="w3-bar-item w3-right w3-button" runat="server" Text="Use the App!" OnClick="Practice_Click" Visible="False" />
                 <!--  -->
             </div>
