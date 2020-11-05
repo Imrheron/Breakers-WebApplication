@@ -93,6 +93,12 @@ namespace WebApplication2
                 lblerrormessage.Visible = true;
                 lblerrormessage.Text = "Please enter text in all fields";
             }
+            else if (txtpassword.Text.Length < 8)
+            {
+
+                lblerrormessage.Visible = true; //Validates the User's password to make sure it is of relative strength
+                lblerrormessage.Text = "Your password must be greater than 8 characters";
+            }
             else
             {
                 using (SqlConnection sqlcon = new SqlConnection(connectionstring))

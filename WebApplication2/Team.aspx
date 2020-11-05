@@ -66,7 +66,7 @@
     <title></title>
 </head>
 
-<body style="background-color:black;">
+<body style="background-color:white;">
     <nav class="w3-sidebar w3-bar-block w3-white w3-card w3-animate-left w3-xxlarge" style="display:none;z-index:2" id="mySidebar">
   <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-display-topright w3-text-teal">Close
     <i class="fa fa-remove"></i>
@@ -86,7 +86,7 @@
   <a href="/Homepage.aspx" class="w3-bar-item w3-button w3-black"><i class="fa fa-home w3-margin-right"></i>Home</a>
   <a href="/Team.aspx" class="w3-bar-item w3-button w3-hide-small ">Team</a>
   <a href="/Videos.aspx" class="w3-bar-item w3-button w3-hide-small w3-hover-#00a3cc">Videos</a>
-  <a href="/Merch.aspx" class="w3-bar-item w3-button w3-hide-small w3-hover-#00a3cc">Tickets</a>
+  <a href="/Merch.aspx" class="w3-bar-item w3-button w3-hide-small w3-hover-#00a3cc">Merch</a>
      <asp:HyperLink ID="HyperLink1" href="/Sign in" runat="server" class="w3-bar-item w3-button w3-hide-small w3-hover-#00a3cc">Sign in</asp:HyperLink>
   
     <asp:Button runat="server" class="w3-bar-item w3-right w3-dropdown-hover w3-button" title="Notifications" Text="profile" OnClick="buttonprofile_Click" ID="buttonprofile" Visible="False" />     
@@ -103,57 +103,50 @@
 <h2>OUR TEAM</h2>
 <p>Meet the team - our office rats:</p>
 
-<div class="w3-row"><br>
 
 <div class="w3-third">
   <div class="container">
-  <img src="Images\Player Images\BREAKERS_01_TomAbercrombie_1267.png" alt="Tom Abercrombie" class="image" style="width:80%; height: 550px;border:groove 2px cornflowerblue;">
-     <div class="overlay">
-    <div class="first">Tom </div>
-         <div class="last">Abercrombie </div>
-
-  </div>
-
+  <img src="Images\Player Images\BREAKERS_01_TomAbercrombie_1267.png" alt="Tom Abercrombie" style="width:80%; height: 550px;background:linear-gradient(black,cornflowerblue);">
+<h2 style="color:black;font-size:xx-large;">Tom Abercrombie</h2>
 </div>
 </div>
 
 <div class="w3-third">
   <div class="container">
-  <img src="Images\Player Images\BREAKERS_02_CoreyWebster_2813.png" alt="Corey Webster" style="width:80%; height: 550px;border:groove 2px cornflowerblue;">
-<h2 style="color:black;font-size:xx-large;border:2px solid cornflowerblue;">Corey Webster</h2>
+  <img src="Images\Player Images\BREAKERS_02_CoreyWebster_2813.png" alt="Corey Webster" style="width:80%; height: 550px;background:linear-gradient(black,cornflowerblue);">
+<h2 style="color:black;font-size:xx-large;">Corey Webster</h2>
 </div>
 </div>
 
 <div class="w3-third">
   <div class="container">
-  <img src="Images\Player Images\BREAKERS_03_FinnDelany_3065.png" alt="Finn Delany" style="width:80%; height: 550px;border:groove 2px black;">
-<h2 style="color:black;font-size:xx-large;border:2px solid cornflowerblue;">Finn Delany</h2>
+  <img src="Images\Player Images\BREAKERS_03_FinnDelany_3065.png" alt="Finn Delany" style="width:80%; height: 550px;background:linear-gradient(black,cornflowerblue);">
+<h2 style="color:black;font-size:xx-large;">Finn Delany</h2>
 </div>
 </div>
 
 <div class="w3-third">
   <div class="container">
-  <img src="Images\Player Images\BREAKERS_04_TomVodanovich_5271.png" alt="Tom Vodanovich" style="width:80%; height: 550px;border:groove 2px black;">
-<h2 style="color:black;font-size:xx-large;border:2px solid cornflowerblue;">Tom Vodanovich</h2>
+  <img src="Images\Player Images\BREAKERS_04_TomVodanovich_5271.png" alt="Tom Vodanovich" style="width:80%; height: 550px;background:linear-gradient(black,cornflowerblue);">
+<h2 style="color:black;font-size:xx-large;">Tom Vodanovich</h2>
 </div>
 </div>
 
     <div class="w3-third">
   <div class="container">
-  <img src="Images\Player Images\BREAKERS_05_JordanNgatai_6592.png" alt="Jordan Ngatai" style="width:80%; height: 550px;border:groove 2px black;">
-<h2 style="color:black;font-size:xx-large;border:2px solid cornflowerblue;">Jordan Ngatai</h2>
+  <img src="Images\Player Images\BREAKERS_05_JordanNgatai_6592.png" alt="Jordan Ngatai" style="width:80%; height: 550px;background:linear-gradient(black,cornflowerblue);">
+<h2 style="color:black;font-size:xx-large;">Jordan Ngatai</h2>
 </div>
 </div>
 
     <div class="w3-third">
   <div class="container">
-  <img src="C:\Users\ac94093\source\repos\WebApplication2\WebApplication2\Images\Player Images\BREAKERS_06_RobLoe_7860.png" alt="Rob Loe" style="width:80%; height: 550px;border:groove 2px black;">
-<h2 style="color:black;font-size:xx-large;border:2px solid cornflowerblue;">Rob Loe</h2>
+  <img src="Images\Player Images\BREAKERS_06_RobLoe_7860.png" alt="Rob Loe" style="width:80%; height: 550px;background:linear-gradient(black,cornflowerblue);">
+<h2 style="color:black;font-size:xx-large;">Rob Loe</h2>
 </div>
 </div>
 
 
-</div>
 </div>
     </form>
 </body>

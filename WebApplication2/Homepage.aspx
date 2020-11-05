@@ -70,7 +70,7 @@
   <a href="/Homepage.aspx" class="w3-bar-item w3-button w3-black"><i class="fa fa-home w3-margin-right"></i>Home</a>
   <a href="/Team.aspx" class="w3-bar-item w3-button w3-hide-small ">Team</a>
   <a href="/Videos.aspx" class="w3-bar-item w3-button w3-hide-small w3-hover-#00a3cc">Videos</a>
-  <a href="/Merch.aspx" class="w3-bar-item w3-button w3-hide-small w3-hover-#00a3cc">Tickets</a>
+  <a href="/Merch.aspx" class="w3-bar-item w3-button w3-hide-small w3-hover-#00a3cc">Merch</a>
      <asp:HyperLink ID="HyperLink1" href="/Sign in" runat="server" class="w3-bar-item w3-button w3-hide-small w3-hover-#00a3cc">Sign in</asp:HyperLink>
   
     <asp:Button runat="server" class="w3-bar-item w3-right w3-dropdown-hover w3-button" title="Notifications" Text="profile" OnClick="buttonprofile_Click" ID="buttonprofile" Visible="False" />     
@@ -143,16 +143,18 @@
 &nbsp;</div>
       <div class="w3-section">      
         <label><i class="fa-envelope-o  fa w3-text-teal w3-xlarge"></i>  Email</label>
-        <asp:TextBox ID="txtEmail" runat="server" Width="1100px" Height="27px"></asp:TextBox>
+        <asp:TextBox ID="txtEmail" runat="server" Width="1100px" Height="27px" TextMode="Email"></asp:TextBox>
+
 &nbsp;</div>
       <div class="w3-section">      
         <label><i class="fa fa-lock w3-text-teal w3-xlarge"></i>  Password</label>
-        <asp:TextBox ID="txtPassword" runat="server" Width="1100px" Height="27px"></asp:TextBox>
+        <asp:TextBox ID="txtPassword" runat="server" Width="1100px" Height="27px" TextMode="Password"></asp:TextBox>
 &nbsp;</div>  
         <asp:Label ID="Someonedidntinputalltheirvalues" runat="server" Text=""></asp:Label>
         <asp:Button ID="AddUser" class="w3-right w3-button w3-theme" runat="server" Text="Sign Up!" OnClick="AddUser_Click" />
     </div>
-      
+
+
   </div>
 </div>
 
@@ -169,10 +171,11 @@
 <footer class="w3-container w3-padding-32 w3-theme-d1 w3-center">
     
   <h4>Follow Us</h4>
-  <a class="w3-button w3-large w3-teal" href="https://www.facebook.com/TheNBL" title="NBL Facebook page "><i class="fa fa-facebook"></i></a>
-  <a class="w3-button w3-large w3-teal" href="https://www.twitter.com/nbl" title="NBL Twitter page"><i class="fa fa-twitter"></i></a>
-  <a class="w3-button w3-large w3-teal" href="https://www.instagram.com/nbl" title="NBL Instagram page"><i class="fa fa-instagram"></i></a>
-  <a class="w3-button w3-large w3-teal w3-hide-small" href="https://www.twitch.tv/nbl" title="NBL Twitch page"><i class="fa fa-twitch"></i></a>
+  <a class="w3-button w3-large w3-teal" href="https://www.facebook.com/nzbreakers/" title="NZ Breakers Facebook page "><i class="fa fa-facebook"></i></a>
+  <a class="w3-button w3-large w3-teal" href="https://twitter.com/NZBreakers" title="NZ Breakers Twitter page"><i class="fa fa-twitter"></i></a>
+  <a class="w3-button w3-large w3-teal" href="https://www.instagram.com/breakersnz/" title="NZ Breakers Instagram page"><i class="fa fa-instagram"></i></a>
+  <a class="w3-button w3-large w3-teal w3-hide-small" href="https://www.youtube.com/user/BreakersNZ" title="NZ BReakers youtube page"><i class="fa fa-youtube"></i></a>
+    
   <p>Made by Gerran</p>
 
   <div style="position:relative;bottom:100px;z-index:1;" class="w3-tooltip w3-right">
