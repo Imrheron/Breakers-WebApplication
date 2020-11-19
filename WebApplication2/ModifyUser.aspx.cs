@@ -86,7 +86,7 @@ namespace WebApplication2
         {
             Response.Redirect("~/App.aspx");
         }
-        protected void Save_Click(object sender, EventArgs e) //saves the profle if they have inputted all their variables
+        protected void Save_Click(object sender, EventArgs e) //Updates the user's profle if they have inputted all their variables, and if the variables meet the requirements
         {
             if (txtusername.Text == "" || txtemail.Text == "" || txtpassword.Text == "" || txtpasswordconfirm.Text == "" || txtpassword.Text != txtpasswordconfirm.Text)
             {
@@ -117,7 +117,7 @@ namespace WebApplication2
                 }
             }
         }
-        protected void btndelete_Click(object sender, EventArgs e) //deletes profile using the sql storedprocedure
+        protected void btndelete_Click(object sender, EventArgs e) //deletes profile using the sql UserDeleteByID query
         {
             using (SqlConnection sqlcon = new SqlConnection(connectionstring))
                 if (sqlcon.State == ConnectionState.Closed)
