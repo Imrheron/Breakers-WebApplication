@@ -21,7 +21,7 @@ namespace WebApplication2
 
         protected void Page_Load(object sender, EventArgs e)
         {
-                if ((string)Session["abc"] == "samspen")
+                if ((string)Session["abc"] == "samspen") /*if logged in, make profile, and application buttons visible*/
             { 
                 buttonprofile.Visible = true;
                 HyperLink1.Visible = false;
@@ -59,7 +59,7 @@ namespace WebApplication2
         {
             Response.Redirect("~/Videos.aspx");
         }
-        public void AddUser_Click(object sender, EventArgs e)
+        public void AddUser_Click(object sender, EventArgs e) //add new user to user database
         {
 
                 if (txtUsername.Text == "" || txtEmail.Text == "" || txtPassword.Text == "")
@@ -68,7 +68,7 @@ namespace WebApplication2
                     Someonedidntinputalltheirvalues.Text = "Please fill in all fields";
                     Someonedidntinputalltheirvalues.Visible = true; //Checks if the user has inputted values in all textboxes
                 }
-                else if (txtPassword.Text.Length < 8)
+                else if (txtPassword.Text.Length < 8) 
                 {
                     Someonedidntinputalltheirvalues.Visible = true; //Validates the User's password to make sure it is of relative strength
                     Someonedidntinputalltheirvalues.Text = "Your password must be greater than 8 characters";
@@ -101,7 +101,7 @@ namespace WebApplication2
         {
             txtUsername.Text = txtEmail.Text = txtPassword.Text = "";
         }
-        protected void Signout_click(object sender, EventArgs e)
+        protected void Signout_click(object sender, EventArgs e) //changes the session variable to sign the user out
         {
             Session["abc"] = "signout"; 
             buttonprofile.Visible = false;
