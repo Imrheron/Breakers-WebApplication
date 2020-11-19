@@ -16,7 +16,7 @@ namespace WebApplication2
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            if ((string)Session["abc"] == "samspen")
+            if ((string)Session["abc"] == "samspen") //checks if the user is logged in
             {
                 buttonprofile.Visible = true;
                 HyperLink1.Visible = false;
@@ -33,19 +33,19 @@ namespace WebApplication2
 
             Emaillbl.Text = (string)Session["GetEmail"];
             Passlbl.Text = (string)Session["GetPassword"];
-            if (!IsPostBack)
+            if (!IsPostBack) //If page reloads, execute following code:
             {
                 using (SqlConnection sqlcon = new SqlConnection(connectionstring))
                 {
 
                     sqlcon.Open();
-                    SqlDataAdapter sqlDa = new SqlDataAdapter("GetUserID", sqlcon);
+                    SqlDataAdapter sqlDa = new SqlDataAdapter("GetUserID", sqlcon); //Runs the GetUserID query, which gets the user ID from the Email and Password
                     sqlDa.SelectCommand.CommandType = CommandType.StoredProcedure;
-                    sqlDa.SelectCommand.Parameters.AddWithValue("@Email", Emaillbl.Text);
+                    sqlDa.SelectCommand.Parameters.AddWithValue("@Email", Emaillbl.Text); 
                     sqlDa.SelectCommand.Parameters.AddWithValue("@Password", Passlbl.Text);
                     DataTable dtbl = new DataTable();
-                    sqlDa.Fill(dtbl);
-                    UserIDnumber.Text = dtbl.Rows[0][0].ToString();
+                    sqlDa.Fill(dtbl); //fill the textboxes with the users information after getting the user ID number
+                    UserIDnumber.Text = dtbl.Rows[0][0].ToString(); 
                     txtusername.Text = dtbl.Rows[0][1].ToString();
                     txtemail.Text = dtbl.Rows[0][2].ToString();
                     txtpassword.Text = dtbl.Rows[0][3].ToString();
